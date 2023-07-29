@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Res } from '../model/res.model';
 import { Route } from '../model/route.model';
@@ -14,7 +14,13 @@ export class BackendService {
   }
 
   optimizeRoutes(routes: Route[]) {
-    let url = 'http://localhost:8080/api/initial2';
-    return this.http.post<[Route]>(url, new PostBody(routes));
+    let url = 'http://localhost:8080/api/mergeRoutes';
+    console.log(routes);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
+    };
+    return this.http.post<[Route]>(url, routes, httpOptions);
   }
 }

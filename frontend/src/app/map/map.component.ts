@@ -10,6 +10,7 @@ import { Route } from '../model/route.model';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
+  private routes!: Route[];
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
@@ -110,8 +111,11 @@ export class MapComponent implements OnInit {
     const endPoint = L.latLng(48.40178485, 15.984785550000007); // Example end point coordinates
 
     //this.createRouting(startPoint, endPoint);
+    this.map.remove();
+    this.initMap();
 
     this.backendService.getRoutes().subscribe((response) => {
+      this.routes = response;
       response.forEach((r) => {
         const targetList: L.LatLng[] = [];
         r.targets.forEach((target) => {
@@ -127,7 +131,28 @@ export class MapComponent implements OnInit {
     });
   }
 
-  onOptimizeButtonClick(): void {}
+  onOptimizeButtonClick(): void {
+    this.map.remove();
+    this.initMap();
+    if (this.routes.length > 0) {
+      this.backendService.optimizeRoutes(this.routes).subscribe((response) => {
+        response.forEach((r) => {
+          const targetList: L.LatLng[] = [];
+          r.targets.forEach((target) => {
+            targetList.push(new L.LatLng(target.latitude, target.longitude));
+          });
+
+          this.addRouteBasedOnCoordinates(
+            this.map,
+            targetList,
+            '#' +
+              (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
+          );
+        });
+      });
+    } else {
+    }
+  }
 
   // Function to toggle colorblind-friendly mode
   toggleColorblind(): void {
