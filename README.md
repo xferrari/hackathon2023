@@ -49,8 +49,8 @@ Contributions are welcome! Please follow the guidelines below to contribute to t
    ```
 5. Create a pull request (PR) to the original repository's main branch.
 
-Please follow the project's CONTRIBUTING.md guidelines and adhere to the Code of Conduct when contributing.
+Please follow the project's [CONTRIBUTING.md](CONTRIBUTING.md) guidelines and adhere to the Code of Conduct when contributing.
 ## License
-This project is licensed under the MIT License. You are free to use, modify, and distribute this software as per the terms of the MIT License.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software as per the terms of the MIT License.
 ## Questions or Feedback?
-If you have any questions or feedback regarding this project, please feel free to open an issue or contact the project maintainer.
+If you have any questions or feedback regarding this project, please feel free to [open an issue](https://github.com/xferrari/hackathon2023/issues/new) or contact the [project maintainer](mailto:ferrari.dominik@gmail.com).

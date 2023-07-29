@@ -11,17 +11,12 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.graphhopper.directions.api.client.ApiException;
-import java.util.ArrayList;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RouteContoller {
@@ -33,30 +28,72 @@ public class RouteContoller {
 
     @GetMapping("/api/initial")
     @ResponseBody
-    public ResponseEntity<List<Route>> getInitData() throws JsonProcessingException, RouteNotFoundException, ApiException {
-        List<Location> list1= new ArrayList<>();
+    public ResponseEntity<List<Route>> getInitData() throws RouteNotFoundException, ApiException {
+        List<Location> list1 = new ArrayList<>();
         list1.add(new Location(48.21612, 16.373137));
         list1.add(new Location(48.4017869, 15.9847379));
         list1.add(new Location(48.3739927, 16.6357775));
         list1.add(new Location(48.1245335, 14.8823511));
-        Route route1  = RouteEvaluator.getFullRouteInformation(list1);
+        Route route1 = RouteEvaluator.getFullRouteInformation(list1);
 
-        List<Location> list2= new ArrayList<>();
+        List<Location> list2 = new ArrayList<>();
         list2.add(new Location(48.4017869, 15.9847379));
         list2.add(new Location(48.3739927, 16.6357775));
         list2.add(new Location(48.1245335, 14.8823511));
-        Route route2  = RouteEvaluator.getFullRouteInformation(list2);
+        Route route2 = RouteEvaluator.getFullRouteInformation(list2);
 
-        List<Location> list3= new ArrayList<>();
+        List<Location> list3 = new ArrayList<>();
         list3.add(new Location(48.0053016, 16.231961));
         list3.add(new Location(48.4017869, 15.9847379));
         list3.add(new Location(48.1245335, 14.8823511));
-        Route route3  = RouteEvaluator.getFullRouteInformation(list3);
+        Route route3 = RouteEvaluator.getFullRouteInformation(list3);
 
-        List<Route> listOfTheList=new ArrayList<>();
+        List<Route> listOfTheList = new ArrayList<>();
         listOfTheList.add(route1);
         listOfTheList.add(route2);
         listOfTheList.add(route3);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+       // return mapper.writeValueAsString(listOfTheList);
+    return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
+    }
+
+    @GetMapping("/api/initial2")
+    @ResponseBody
+    public ResponseEntity<List<Route>> getInitData2() throws RouteNotFoundException, ApiException {
+        List<Location> list2 = new ArrayList<>();
+        list2.add(new Location(48.4017869, 15.9847379));
+        list2.add(new Location(48.3739927, 16.6357775));
+        list2.add(new Location(48.1245335, 14.8823511));
+        Route route2 = RouteEvaluator.getFullRouteInformation(list2);
+
+        List<Location> list3 = new ArrayList<>();
+        list3.add(new Location(48.0053016, 16.231961));
+        list3.add(new Location(48.4017869, 15.9847379));
+        list3.add(new Location(48.1245335, 14.8823511));
+        Route route3 = RouteEvaluator.getFullRouteInformation(list3);
+
+        List<Location> list1 = new ArrayList<>();
+        list1.add(new Location(48.21612, 16.373137));
+        list1.add(new Location(48.4017869, 15.9847379));
+        list1.add(new Location(48.3739927, 16.6357775));
+        list1.add(new Location(48.1245335, 14.8823511));
+        Route route1 = RouteEvaluator.getFullRouteInformation(list1);
+
+        List<Location> list4 = new ArrayList<>();
+        list4.add(new Location(47.845516, 16.516668));
+        list4.add(new Location(47.7766024, 17.0326694));
+        list4.add(new Location(47.6000949, 16.6252523));
+        list4.add(new Location(47.8966677, 16.6438987));
+        Route route4 = RouteEvaluator.getFullRouteInformation(list1);
+
+        List<Route> listOfTheList = new ArrayList<>();
+
+        listOfTheList.add(route2);
+        listOfTheList.add(route3);
+        listOfTheList.add(route1);
+        listOfTheList.add(route4);
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
@@ -76,7 +113,7 @@ public class RouteContoller {
 
     @PostMapping("api/mergeRoutes")
     public ResponseEntity<List<Route>> mergeRoutes(@RequestBody List<Route> routes)
-        throws RouteNotFoundException, ApiException {
+            throws RouteNotFoundException, ApiException {
 
         var routesWithCosts = new ArrayList<Route>();
         for (var route : routes) {
