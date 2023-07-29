@@ -53,6 +53,25 @@ export class MapComponent implements OnInit {
 
     this.routingControl = L.Routing.control({
       waypoints: [startCoord, endCoord],
+      itineraryClassName: "oida",
+      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
+    }).addTo(this.map);
+
+    L.Routing.control({
+      waypoints: [endCoord, startCoord],
+      itineraryClassName: "oida",
+
+      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
+    }).addTo(this.map);
+
+    L.Routing.control({
+      waypoints: [L.latLng(47.9988284, 16.856114), L.latLng(48.3772609, 16.3218755)],
+      itineraryClassName: "oida",
+      lineOptions: {
+        styles: [{color: 'green', opacity: 0.8, weight: 2}],
+        extendToWaypoints: true,
+        missingRouteTolerance: 0
+      },
       routeWhileDragging: true // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
   }
