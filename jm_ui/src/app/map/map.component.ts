@@ -8,12 +8,12 @@ import 'leaflet-routing-machine';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  
   private map!: L.Map;
+  private routingControl!: L.Routing.Control; // To store the routing control
+
   private readonly defaultLat = 37.7749;
   private readonly defaultLng = -122.4194;
   private readonly defaultZoom = 13;
-  private routingControl: L.Routing.Control;
 
   constructor(private elementRef: ElementRef) { }
 
@@ -22,7 +22,6 @@ export class MapComponent implements OnInit {
   }
 
   private initMap(): void {
-    require('leaflet-routing-machine');
     // Create the map
     this.map = L.map(this.elementRef.nativeElement.querySelector('#map')).setView([this.defaultLat, this.defaultLng], this.defaultZoom);
 
@@ -32,22 +31,25 @@ export class MapComponent implements OnInit {
     }).addTo(this.map);
   }
 
-  drawRoute() {
-    // Replace [LATITUDE1, LONGITUDE1] and [LATITUDE2, LONGITUDE2] with your desired coordinates
-    const startPoint = L.latLng([LATITUDE1, LONGITUDE1]);
-    const endPoint = L.latLng([LATITUDE2, LONGITUDE2]);
-
-    // Clear previous routing if any
+  // Function to create the routing between two points
+  createRouting(start: L.LatLng, end: L.LatLng): void {
     if (this.routingControl) {
-      this.routingControl.setWaypoints([]);
       this.map.removeControl(this.routingControl);
     }
 
-    // Create the routing control and add it to the map
     this.routingControl = L.Routing.control({
-      waypoints: [startPoint, endPoint],
-      routeWhileDragging: true,
+      waypoints: [
+        L.latLng(start.lat, start.lng),
+        L.latLng(end.lat, end.lng)
+      ],
+      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
   }
 
+  onRouteButtonClick(): void {
+    const startPoint = L.latLng(37.7749, -122.4194); // Example start point coordinates
+    const endPoint = L.latLng(37.3382, -121.8863);   // Example end point coordinates
+
+    this.createRouting(startPoint, endPoint);
+  }
 }
