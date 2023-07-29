@@ -173,6 +173,8 @@ public class RouteContoller {
                     break;
                 }
             }
+            if (mergedRoute != null)
+                break;
         }
         if (mergedRoute != null) {
             routes.remove(route1Merged);
