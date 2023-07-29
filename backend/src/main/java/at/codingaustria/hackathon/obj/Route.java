@@ -5,9 +5,12 @@ import java.util.List;
 public class Route {
     List<Location> targets;
     List<Location> path;
+    double costs;
 
-    public Route(List<Location> targets) {
+    public Route(List<Location> targets, List<Location> path, double costs) {
         this.targets = targets;
+        this.path = path;
+        this.costs = costs;
     }
 
     public Route() {
