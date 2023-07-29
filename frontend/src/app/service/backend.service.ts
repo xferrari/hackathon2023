@@ -1,8 +1,6 @@
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Res } from '../model/res.model';
 import { Route } from '../model/route.model';
-import { PostBody } from '../model/postbody.model';
 
 @Injectable()
 export class BackendService {
