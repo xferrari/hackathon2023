@@ -11,9 +11,9 @@ export class MapComponent implements OnInit {
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
-  private readonly defaultLat = 37.7749;
-  private readonly defaultLng = -122.4194;
-  private readonly defaultZoom = 13;
+  private readonly defaultLat = 48.2144935;
+  private readonly defaultLng = 16.3760585;
+  private readonly defaultZoom = 8;
 
   constructor(private elementRef: ElementRef) { }
 
@@ -36,6 +36,25 @@ export class MapComponent implements OnInit {
     if (this.routingControl) {
       this.map.removeControl(this.routingControl);
     }
+    
+    // Custom icons for markers
+    const startIcon = L.icon({
+      iconUrl: 'assets/start-icon.png', // Replace with the path to your start icon image
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32]
+    });
+
+    const endIcon = L.icon({
+      iconUrl: 'assets/end-icon.png', // Replace with the path to your end icon image
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32]
+    });
+
+    // Add markers for start and end points with custom icons
+    L.marker(start, { icon: startIcon, interactive: false }).addTo(this.map).bindPopup('Start Point');
+    L.marker(end, { icon: endIcon, interactive: false }).addTo(this.map).bindPopup('End Point');
 
     this.routingControl = L.Routing.control({
       waypoints: [
