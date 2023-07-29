@@ -11,7 +11,6 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.graphhopper.directions.api.client.ApiException;
-import java.util.stream.DoubleStream;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +24,31 @@ public class RouteContoller {
     @GetMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
+    }
+
+    @GetMapping("/api/initial3")
+    @ResponseBody
+    public ResponseEntity<List<Route>> getInitData3() throws RouteNotFoundException, ApiException {
+        List<Location> innsbruckBregenz = new ArrayList<>();
+        innsbruckBregenz.add(new Location(47.259659, 11.400375));
+        innsbruckBregenz.add(new Location(47.50311, 9.7471));
+        Route route1 = RouteEvaluator.getFullRouteInformation(innsbruckBregenz);
+
+        var locations = List.of(
+                new Location(48.21612, 16.373137),
+                new Location(48.203530, 15.638170)
+        );
+        Route route2 = RouteEvaluator.getFullRouteInformation(innsbruckBregenz);
+
+        List<Route> listOfTheList = new ArrayList<>();
+        listOfTheList.add(route1);
+        listOfTheList.add(route2);
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        // return mapper.writeValueAsString(listOfTheList);
+        return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
     }
 
     @GetMapping("/api/initial")
@@ -56,8 +80,8 @@ public class RouteContoller {
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-       // return mapper.writeValueAsString(listOfTheList);
-    return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
+        // return mapper.writeValueAsString(listOfTheList);
+        return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
     }
 
     @GetMapping("/api/initial2")
