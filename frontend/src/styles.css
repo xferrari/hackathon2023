@@ -9,3 +9,17 @@ body, html {
 table.oida {
   display: none;
 }
+
+
+/* Add any other custom styles for the entire application below */
+
+/* For example, you can define global styles for your application here */
+
+/* body, html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+} */
+
+/* Add any other global styles or custom CSS as needed */
+
+/* Note: If you have other component-specific styles, you can still include them here or use the component's styleUrls option in the component metadata. */

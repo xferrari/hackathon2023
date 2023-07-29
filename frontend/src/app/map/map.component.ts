@@ -17,6 +17,8 @@ export class MapComponent implements OnInit {
 
   constructor(private elementRef: ElementRef) { }
 
+  isColorblindModeActive = true;
+
   ngOnInit(): void {
     this.initMap();
   }
@@ -83,5 +85,17 @@ export class MapComponent implements OnInit {
     const endPoint = L.latLng(48.40178485, 15.984785550000007);   // Example end point coordinates
 
     this.createRouting(startPoint, endPoint);
+  }
+
+  // Function to toggle colorblind-friendly mode
+  toggleColorblind(): void {
+   console.log('test');
+   
+    this.isColorblindModeActive = !this.isColorblindModeActive;
+    if (this.isColorblindModeActive) {
+      document.documentElement.classList.add('colorblind-mode');
+    } else {
+      document.documentElement.classList.remove('colorblind-mode');
+    }
   }
 }
