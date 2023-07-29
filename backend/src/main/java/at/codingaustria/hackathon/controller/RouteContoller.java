@@ -4,9 +4,15 @@ package at.codingaustria.hackathon.controller;
 import at.codingaustria.hackathon.evaluation.RouteCompatator;
 import at.codingaustria.hackathon.evaluation.RouteEvaluator;
 import at.codingaustria.hackathon.evaluation.RouteNotFoundException;
+import at.codingaustria.hackathon.obj.Location;
 import at.codingaustria.hackathon.obj.Route;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.graphhopper.directions.api.client.ApiException;
+import java.util.ArrayList;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -23,6 +29,38 @@ public class RouteContoller {
     @GetMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
+    }
+
+    @GetMapping("/api/initial")
+    @ResponseBody
+    public String getInitData() throws JsonProcessingException, RouteNotFoundException, ApiException {
+        List<Location> list1= new ArrayList<>();
+        list1.add(new Location(48.21612, 16.373137));
+        list1.add(new Location(48.4017869, 15.9847379));
+        list1.add(new Location(48.3739927, 16.6357775));
+        list1.add(new Location(48.1245335, 14.8823511));
+        Route route1  = RouteEvaluator.getFullRouteInformation(list1);
+
+        List<Location> list2= new ArrayList<>();
+        list2.add(new Location(48.4017869, 15.9847379));
+        list2.add(new Location(48.3739927, 16.6357775));
+        list2.add(new Location(48.1245335, 14.8823511));
+        Route route2  = RouteEvaluator.getFullRouteInformation(list2);
+
+        List<Location> list3= new ArrayList<>();
+        list3.add(new Location(48.0053016, 16.231961));
+        list3.add(new Location(48.4017869, 15.9847379));
+        list3.add(new Location(48.1245335, 14.8823511));
+        Route route3  = RouteEvaluator.getFullRouteInformation(list3);
+
+        List<Route> listOfTheList=new ArrayList<>();
+        listOfTheList.add(route1);
+        listOfTheList.add(route2);
+        listOfTheList.add(route3);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        return mapper.writeValueAsString(listOfTheList);
     }
 
     @GetMapping("/api/route")
