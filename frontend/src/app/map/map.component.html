@@ -1,12 +1,31 @@
 <div class="container">
   <div class="menu-container">
     <div class="menu-frame">
-      <button mat-raised-button color="primary" (click)="onRouteButtonClick()">Get Route</button>
-      <button mat-raised-button color="primary" [class.button-colorblind-mode]="isColorblindModeActive" (click)="toggleColorblind()">color blind mode</button>
+      <button mat-raised-button color="primary" (click)="onRouteButtonClick()">
+        Get Routes
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onOptimizeButtonClick()"
+      >
+        Optimize Routes
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        [class.button-colorblind-mode]="isColorblindModeActive"
+        (click)="toggleColorblind()"
+      >
+        color blind mode
+      </button>
     </div>
   </div>
   <div class="map-container">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    />
     <div class="map-frame">
       <div id="map"></div>
     </div>

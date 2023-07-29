@@ -109,7 +109,7 @@ export class MapComponent implements OnInit {
     const startPoint = L.latLng(48.2144935, 16.3760585); // Example start point coordinates
     const endPoint = L.latLng(48.40178485, 15.984785550000007); // Example end point coordinates
 
-    this.createRouting(startPoint, endPoint);
+    //this.createRouting(startPoint, endPoint);
 
     this.backendService.getRoutes().subscribe((response) => {
       response.forEach((r) => {
@@ -126,6 +126,8 @@ export class MapComponent implements OnInit {
       });
     });
   }
+
+  onOptimizeButtonClick(): void {}
 
   // Function to toggle colorblind-friendly mode
   toggleColorblind(): void {
