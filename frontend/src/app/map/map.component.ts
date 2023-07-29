@@ -53,40 +53,9 @@ export class MapComponent implements OnInit {
       iconAnchor: [16, 32],
       popupAnchor: [0, -32],
     });
-
-    const startCoord = L.latLng([start.lat, start.lng]);
-    const endCoord = L.latLng([end.lat, end.lng]);
-
     // Add markers for start and end points with custom icons
     //L.marker(start, { icon: startIcon, interactive: false }).addTo(this.map).bindPopup('Start Point');
     //L.marker(end, { icon: startIcon, interactive: false }).addTo(this.map).bindPopup('End Point');
-    /*
-    this.routingControl = L.Routing.control({
-      waypoints: [startCoord, endCoord],
-      itineraryClassName: 'oida',
-      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
-    }).addTo(this.map);
-
-    L.Routing.control({
-      waypoints: [endCoord, startCoord],
-      itineraryClassName: 'oida',
-
-      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
-    }).addTo(this.map);
-
-    L.Routing.control({
-      waypoints: [
-        L.latLng(47.9988284, 16.856114),
-        L.latLng(48.3772609, 16.3218755),
-      ],
-      itineraryClassName: 'oida',
-      lineOptions: {
-        styles: [{ color: 'green', opacity: 0.8, weight: 2 }],
-        extendToWaypoints: true,
-        missingRouteTolerance: 0,
-      },
-      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
-    }).addTo(this.map);*/
   }
 
   addRouteBasedOnCoordinates(
@@ -107,27 +76,13 @@ export class MapComponent implements OnInit {
   }
 
   onRouteButtonClick(): void {
-    const startPoint = L.latLng(48.2144935, 16.3760585); // Example start point coordinates
-    const endPoint = L.latLng(48.40178485, 15.984785550000007); // Example end point coordinates
-
     //this.createRouting(startPoint, endPoint);
     this.map.remove();
     this.initMap();
 
     this.backendService.getRoutes().subscribe((response) => {
       this.routes = response;
-      response.forEach((r) => {
-        const targetList: L.LatLng[] = [];
-        r.targets.forEach((target) => {
-          targetList.push(new L.LatLng(target.latitude, target.longitude));
-        });
-
-        this.addRouteBasedOnCoordinates(
-          this.map,
-          targetList,
-          '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
-        );
-      });
+      this.handleResponse(response);
     });
   }
 
@@ -136,22 +91,25 @@ export class MapComponent implements OnInit {
     this.initMap();
     if (this.routes.length > 0) {
       this.backendService.optimizeRoutes(this.routes).subscribe((response) => {
-        response.forEach((r) => {
-          const targetList: L.LatLng[] = [];
-          r.targets.forEach((target) => {
-            targetList.push(new L.LatLng(target.latitude, target.longitude));
-          });
-
-          this.addRouteBasedOnCoordinates(
-            this.map,
-            targetList,
-            '#' +
-              (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
-          );
-        });
+        this.handleResponse(response);
       });
     } else {
     }
+  }
+
+  handleResponse(response: Route[]): void {
+    response.forEach((r) => {
+      const targetList: L.LatLng[] = [];
+      r.targets.forEach((target) => {
+        targetList.push(new L.LatLng(target.latitude, target.longitude));
+      });
+
+      this.addRouteBasedOnCoordinates(
+        this.map,
+        targetList,
+        '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
+      );
+    });
   }
 
   // Function to toggle colorblind-friendly mode
