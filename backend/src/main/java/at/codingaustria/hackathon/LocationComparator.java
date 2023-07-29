@@ -28,10 +28,4 @@ public class LocationComparator {
         return Math.sqrt(distance);
     }
 
-    public static double distanceBetweenLocations(Location l1, Location l2) {
-        if(l1.hasAltitude() && l2.hasAltitude()) {
-            return distance(l1.getLatitude(), l2.getLatitude(), l1.getLongitude(), l2.getLongitude(), l1.getAltitude(), l2.getAltitude());
-        }
-        return l1.distanceTo(l2);
-    }
 }
