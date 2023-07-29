@@ -1,6 +1,7 @@
 /* src/styles.css or src/styles.scss */
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -10,6 +11,13 @@ table.oida {
   display: none;
 }
 
+div.leaflet-routing-alt h2 {
+  display: none;
+}
+
+div.leaflet-routing-container {
+  background-color: whitesmoke;
+}
 
 /* Add any other custom styles for the entire application below */
 
