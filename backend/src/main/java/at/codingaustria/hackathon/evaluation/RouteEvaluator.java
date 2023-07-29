@@ -1,5 +1,7 @@
 package at.codingaustria.hackathon.evaluation;
 
+import at.codingaustria.hackathon.obj.Location;
+import at.codingaustria.hackathon.obj.Route;
 import com.graphhopper.directions.api.client.ApiClient;
 import com.graphhopper.directions.api.client.ApiException;
 import com.graphhopper.directions.api.client.api.RoutingApi;
@@ -8,6 +10,7 @@ import com.graphhopper.directions.api.client.model.RouteResponsePath;
 import com.graphhopper.directions.api.client.model.VehicleProfileId;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.IntStream;
 
 public class RouteEvaluator {
@@ -19,17 +22,27 @@ public class RouteEvaluator {
         .toList();
   }
 
-  public static double distance(double latitude1, double latitude2, double longitude1, double longitude2)
-      throws ApiException, RouteNotFoundException {
+  public static double distance(double latitude1, double latitude2, double longitude1,
+      double longitude2)
+      throws RouteNotFoundException, ApiException {
+    return getFullRouteInformation(List.of(new Location(latitude1, longitude1),
+        new Location(latitude2, longitude2))).getCosts();
+  }
+
+  public static Route getFullRouteInformation(List<Location> stops)
+      throws RouteNotFoundException, ApiException {
     String apiKey = "bf00158f-7ee7-46b6-a1ba-7b1669cc4c43"; // Replace with your actual API key
 
     // Create the GraphHopper API client
     ApiClient apiClient = new ApiClient();
     apiClient.setApiKey(apiKey);
 
+    //Some doc: https://github.com/graphhopper/directions-api-clients/blob/master/java/docs/RoutingApi.md
     // Create the RoutingApi instance
     RoutingApi routingApi = new RoutingApi(apiClient);
-    List<String> point = generatePoints(List.of(latitude1, latitude2), List.of(longitude1, longitude2)); // List<String> | The points for which the route should be calculated. Format: `[latitude,longitude]`. Specify at least an origin and a destination. Via points are possible. The maximum number depends on your plan.
+    List<String> point = generatePoints(stops.stream().map(Location::getLatitude).toList(),
+        stops.stream().map(Location::getLongitude)
+            .toList()); // List<String> | The points for which the route should be calculated. Format: `[latitude,longitude]`. Specify at least an origin and a destination. Via points are possible. The maximum number depends on your plan.
     List<String> pointHint = null; // List<String> | The `point_hint` is typically a road name to which the associated `point` parameter should be snapped to. Specify no `point_hint` parameter or the same number as you have `point` parameters.
     List<String> snapPrevention = null; // List<String> | Optional parameter to avoid snapping to a certain road class or road environment. Currently supported values are `motorway`, `trunk`, `ferry`, `tunnel`, `bridge` and `ford`. Multiple values are specified like `snap_prevention=ferry&snap_prevention=motorway`.
     VehicleProfileId vehicle = VehicleProfileId.CAR; // VehicleProfileId | The vehicle profile for which the route should be calculated.
@@ -37,10 +50,10 @@ public class RouteEvaluator {
     Boolean elevation = null; // Boolean | If `true`, a third coordinate, the altitude, is included with all positions in the response. This changes the format of the `points` and `snapped_waypoints` fields of the response, in both their encodings. Unless you switch off the `points_encoded` parameter, you need special code on the client side that can handle three-dimensional coordinates. A request can fail if the vehicle profile does not support elevation. See the features object for every vehicle profile.
     List<String> details = null; // List<String> | Optional parameter to retrieve path details. You can request additional details for the route: `street_name` and `time`. For all motor vehicle profiles, we additionally support `max_speed`, `toll`, `road_class`, `road_environment`, and `surface`.
     Boolean optimize = null; // Boolean | Normally, the calculated route will visit the points in the order you specified them. If you have more than two points, you can set this parameter to `true` and the points may be re-ordered to minimize the total travel time. Keep in mind that the limits on the number of locations of the Route Optimization applies, and the request is more expensive.
-    Boolean instructions = null; // Boolean | If instructions should be calculated and returned
-    Boolean calcPoints = null; // Boolean | If the points for the route should be calculated at all.
+    Boolean instructions = false; // Boolean | If instructions should be calculated and returned
+    Boolean calcPoints = true; // Boolean | If the points for the route should be calculated at all.
     Boolean debug = true; // Boolean | If `true`, the output will be formatted.
-    Boolean pointsEncoded = true; // Boolean | Allows changing the encoding of location data in the response. The default is polyline encoding, which is compact but requires special client code to unpack. (We provide it in our JavaScript client library!) Set this parameter to `false` to switch the encoding to simple coordinate pairs like `[lon,lat]`, or `[lon,lat,elevation]`. See the description of the response format for more information.
+    Boolean pointsEncoded = false; // Boolean | Allows changing the encoding of location data in the response. The default is polyline encoding, which is compact but requires special client code to unpack. (We provide it in our JavaScript client library!) Set this parameter to `false` to switch the encoding to simple coordinate pairs like `[lon,lat]`, or `[lon,lat,elevation]`. See the description of the response format for more information.
     String type = "json"; // String | Specifies the media type for the response. For `json`, it will be `application/json`. For `gpx`, it will be `application/gpx+xml`.
     Boolean chDisable = false; // Boolean | Use this parameter in combination with one or more parameters from below.
     String weighting = null; // String | Determines the way the ''best'' route is calculated. Default is `fastest`. Other options are `shortest` (e.g. for `vehicle=foot` or `bike`) and `short_fastest` which finds a reasonable balance between `shortest` and `fastest`. Requires `ch.disable=true`.
@@ -66,9 +79,15 @@ public class RouteEvaluator {
     if (result.getPaths() != null && !result.getPaths().isEmpty()) {
       // Get the first route (best route)
       RouteResponsePath route = result.getPaths().get(0);
+      var allPoints = (List<List<Double>>) ((Map<String, Object>) route.getPoints()).get(
+          "coordinates");
 
       // Access route information like distance, time, and geometry
-      return route.getDistance();
+      return new Route(
+          stops,
+          allPoints.stream().map(x -> new Location(x.get(0), x.get(1))).toList(),
+          route.getDistance()
+      );
     }
 
     throw new RouteNotFoundException();

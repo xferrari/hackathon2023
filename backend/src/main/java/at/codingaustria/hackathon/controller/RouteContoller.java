@@ -1,7 +1,6 @@
 package at.codingaustria.hackathon.controller;
 
 
-import at.codingaustria.hackathon.obj.RouteObj;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -23,11 +22,12 @@ public class RouteContoller {
     @GetMapping("/api/route")
     @ResponseBody
     public String getObject() throws JsonProcessingException {
-        RouteObj routeObj = new RouteObj(Arrays.asList("Wien", "St. Pölten"));
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-        return mapper.writeValueAsString(routeObj);
+//        RouteObj routeObj = new RouteObj(Arrays.asList("Wien", "St. Pölten"));
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+//        return mapper.writeValueAsString(routeObj);
+        return null;
     }
 
 }
