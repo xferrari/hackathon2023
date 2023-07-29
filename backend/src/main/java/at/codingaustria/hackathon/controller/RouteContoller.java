@@ -26,6 +26,31 @@ public class RouteContoller {
         return "Greetings from Spring Boot!";
     }
 
+    @GetMapping("/api/initial3")
+    @ResponseBody
+    public ResponseEntity<List<Route>> getInitData3() throws RouteNotFoundException, ApiException {
+        List<Location> innsbruckBregenz = new ArrayList<>();
+        innsbruckBregenz.add(new Location(47.259659, 11.400375));
+        innsbruckBregenz.add(new Location(47.50311, 9.7471));
+        Route route1 = RouteEvaluator.getFullRouteInformation(innsbruckBregenz);
+
+        var viennaStPoelten = List.of(
+                new Location(48.21612, 16.373137),
+                new Location(48.203530, 15.638170)
+        );
+        Route route2 = RouteEvaluator.getFullRouteInformation(viennaStPoelten);
+
+        List<Route> listOfTheList = new ArrayList<>();
+        listOfTheList.add(route1);
+        listOfTheList.add(route2);
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        // return mapper.writeValueAsString(listOfTheList);
+        return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
+    }
+
     @GetMapping("/api/initial")
     @ResponseBody
     public ResponseEntity<List<Route>> getInitData() throws RouteNotFoundException, ApiException {
@@ -55,8 +80,8 @@ public class RouteContoller {
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-       // return mapper.writeValueAsString(listOfTheList);
-    return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
+        // return mapper.writeValueAsString(listOfTheList);
+        return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
     }
 
     @GetMapping("/api/initial2")
@@ -86,7 +111,7 @@ public class RouteContoller {
         list4.add(new Location(47.7766024, 17.0326694));
         list4.add(new Location(47.6000949, 16.6252523));
         list4.add(new Location(47.8966677, 16.6438987));
-        Route route4 = RouteEvaluator.getFullRouteInformation(list1);
+        Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
         List<Route> listOfTheList = new ArrayList<>();
 
@@ -121,11 +146,12 @@ public class RouteContoller {
         }
 
         var size = 0;
+        var counter = 0;
         do {
+            counter++;
             size = routesWithCosts.size();
             mergeRoutes1(routesWithCosts);
         } while (size > routesWithCosts.size());
-
 
         return new ResponseEntity<>(routesWithCosts, HttpStatus.OK);
     }
@@ -136,7 +162,9 @@ public class RouteContoller {
         Route route2Merged = null;
         for (var route1 : routes) {
             for (var route2 : routes) {
-                var merged = RouteEvaluator.getFullRouteInformation(RouteCompatator.compareRoutes(route1.getTargets(), route2.getTargets()));
+                if (route1.equals(route2))
+                    continue;
+                var merged = RouteCompatator.compareRoutes(route1.getTargets(), route2.getTargets());
 
                 if (merged.getCosts() < (route1.getCosts() + route2.getCosts())) {
                     mergedRoute = merged;

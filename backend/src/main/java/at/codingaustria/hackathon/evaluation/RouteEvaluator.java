@@ -9,6 +9,7 @@ import com.graphhopper.directions.api.client.model.RouteResponse;
 import com.graphhopper.directions.api.client.model.RouteResponsePath;
 import com.graphhopper.directions.api.client.model.VehicleProfileId;
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.IntStream;
@@ -22,11 +23,22 @@ public class RouteEvaluator {
         .toList();
   }
 
+  private static final Map<Location, Map<Location, Double>> cache = new HashMap<>();
+
   public static double distance(double latitude1, double latitude2, double longitude1,
       double longitude2)
       throws RouteNotFoundException, ApiException {
-    return getFullRouteInformation(List.of(new Location(latitude1, longitude1),
+    if (cache.containsKey(new Location(latitude1, longitude1))) {
+      var cachedCosts = cache.get(new Location(latitude1, longitude1)).get(new Location(latitude2, longitude2));
+      if (cachedCosts != null) {
+        return cachedCosts;
+      }
+    }
+    var costs = getFullRouteInformation(List.of(new Location(latitude1, longitude1),
         new Location(latitude2, longitude2))).getCosts();
+    cache.putIfAbsent(new Location(latitude1, longitude1), new HashMap<>());
+    cache.get(new Location(latitude1, longitude1)).put(new Location(latitude2, longitude2), costs);
+    return costs;
   }
 
   public static Route getFullRouteInformation(List<Location> stops)

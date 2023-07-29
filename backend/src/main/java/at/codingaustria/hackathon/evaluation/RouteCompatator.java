@@ -1,52 +1,66 @@
 package at.codingaustria.hackathon.evaluation;
 
 import at.codingaustria.hackathon.obj.Location;
+import at.codingaustria.hackathon.obj.Route;
 import com.graphhopper.directions.api.client.ApiException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RouteCompatator {
-    public static List<Location> compareRoutes(List<Location> route, List<Location> route2) throws RouteNotFoundException, ApiException {
+    public static Route compareRoutes(List<Location> locations1, List<Location> locations2) throws RouteNotFoundException, ApiException {
         List<Location> result = new ArrayList<>();
-        Location locTest = route.get(0);
-        ArrayList<Location> tempList = new ArrayList<>(route);
+        Location locTest = locations1.get(0);
+        var additionalCosts = compareLocation(locations2.get(0), locTest);
+        ArrayList<Location> tempList = new ArrayList<>(locations1);
         tempList.remove(0);
         result.add(locTest);
-        result.addAll(RouteCompatator.compareRoutes(tempList, new ArrayList<>(route2), locTest));
-        return result;
+        var route = RouteCompatator.compareRoutes(tempList, new ArrayList<>(locations2), locTest);
+        result.addAll(route.getTargets());
+        return new Route(
+            result,
+            additionalCosts + route.getCosts()
+        );
     }
 
-    public static List<Location> compareRoutes(List<Location> route, List<Location> route2, Location curLocation) throws RouteNotFoundException, ApiException {
+    public static Route compareRoutes(List<Location> locations1, List<Location> locations2, Location curLocation) throws RouteNotFoundException, ApiException {
         List<Location> result = new ArrayList<>();
-        if (route.isEmpty() && route2.isEmpty()) {
-            return result;
-        } else if (route.isEmpty()) {
-            curLocation = route2.get(0);
+        if (locations1.isEmpty() && locations2.isEmpty()) {
+            return new Route(result, 0);
+        } else if (locations1.isEmpty()) {
+            var additionalCosts = compareLocation(locations2.get(0), curLocation);
+            curLocation = locations2.get(0);
             result.add(curLocation);
-            route2.remove(0);
-            result.addAll(compareRoutes(route, route2, curLocation));
-            return result;
-        } else if (route2.isEmpty()) {
-            curLocation = route.get(0);
+            locations2.remove(0);
+            var route = compareRoutes(locations1, locations2, curLocation);
+            result.addAll(route.getTargets());
+            return new Route(result, route.getCosts() + additionalCosts);
+        } else if (locations2.isEmpty()) {
+            var additionalCosts = compareLocation(locations1.get(0), curLocation);
+            curLocation = locations1.get(0);
             result.add(curLocation);
-            route.remove(0);
-            result.addAll(compareRoutes(route, route2, curLocation));
-            return result;
+            locations1.remove(0);
+            var route = compareRoutes(locations1, locations2, curLocation);
+            result.addAll(route.getTargets());
+            return new Route(result, route.getCosts() + additionalCosts);
         }
 
-        if (compareLocation(route.get(0), curLocation) < compareLocation(route2.get(0), curLocation)) {
-            curLocation = route.get(0);
+        double additionalCosts1 = compareLocation(locations1.get(0), curLocation);
+        double additionalCosts2 = compareLocation(locations2.get(0), curLocation);
+        if (additionalCosts1 < additionalCosts2) {
+            curLocation = locations1.get(0);
             result.add(curLocation);
-            route.remove(0);
-            result.addAll(compareRoutes(route, route2, curLocation));
-            return result;
+            locations2.remove(0);
+            var route = compareRoutes(locations1, locations2, curLocation);
+            result.addAll(route.getTargets());
+            return new Route(result, route.getCosts() + additionalCosts1);
         }
-        curLocation = route2.get(0);
+        curLocation = locations2.get(0);
         result.add(curLocation);
-        route2.remove(0);
-        result.addAll(compareRoutes(route, route2, curLocation));
-        return result;
+        locations2.remove(0);
+        var route = compareRoutes(locations1, locations2, curLocation);
+        result.addAll(route.getTargets());
+        return new Route(result, route.getCosts() + additionalCosts2);
 
 
     }
