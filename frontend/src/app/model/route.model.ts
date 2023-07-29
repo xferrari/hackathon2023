@@ -1,4 +1,6 @@
+import { Loc } from './location.model';
+
 export interface Route {
-  targets: [Location];
+  targets: [Loc];
   costs: number;
 }
