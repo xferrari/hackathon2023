@@ -97,7 +97,7 @@ export class MapComponent implements OnInit {
       waypoints: targets,
       itineraryClassName: 'oida',
       lineOptions: {
-        styles: [{ color: color, opacity: 0.8, weight: 2 }],
+        styles: [{ color: color, opacity: 0.8, weight: 15 }],
         extendToWaypoints: true,
         missingRouteTolerance: 0,
       },
@@ -106,8 +106,6 @@ export class MapComponent implements OnInit {
   }
 
   onRouteButtonClick(): void {
-    const colors = ['red', 'green', 'blue', 'yellow'];
-    let count = 0;
     const startPoint = L.latLng(48.2144935, 16.3760585); // Example start point coordinates
     const endPoint = L.latLng(48.40178485, 15.984785550000007); // Example end point coordinates
 
@@ -131,8 +129,8 @@ export class MapComponent implements OnInit {
 
   // Function to toggle colorblind-friendly mode
   toggleColorblind(): void {
-   console.log('test');
-   
+    console.log('test');
+
     this.isColorblindModeActive = !this.isColorblindModeActive;
     if (this.isColorblindModeActive) {
       document.documentElement.classList.add('colorblind-mode');
