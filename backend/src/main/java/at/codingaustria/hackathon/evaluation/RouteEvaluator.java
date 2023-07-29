@@ -51,7 +51,7 @@ public class RouteEvaluator {
     List<String> details = null; // List<String> | Optional parameter to retrieve path details. You can request additional details for the route: `street_name` and `time`. For all motor vehicle profiles, we additionally support `max_speed`, `toll`, `road_class`, `road_environment`, and `surface`.
     Boolean optimize = null; // Boolean | Normally, the calculated route will visit the points in the order you specified them. If you have more than two points, you can set this parameter to `true` and the points may be re-ordered to minimize the total travel time. Keep in mind that the limits on the number of locations of the Route Optimization applies, and the request is more expensive.
     Boolean instructions = false; // Boolean | If instructions should be calculated and returned
-    Boolean calcPoints = true; // Boolean | If the points for the route should be calculated at all.
+    Boolean calcPoints = false; // Boolean | If the points for the route should be calculated at all.
     Boolean debug = true; // Boolean | If `true`, the output will be formatted.
     Boolean pointsEncoded = false; // Boolean | Allows changing the encoding of location data in the response. The default is polyline encoding, which is compact but requires special client code to unpack. (We provide it in our JavaScript client library!) Set this parameter to `false` to switch the encoding to simple coordinate pairs like `[lon,lat]`, or `[lon,lat,elevation]`. See the description of the response format for more information.
     String type = "json"; // String | Specifies the media type for the response. For `json`, it will be `application/json`. For `gpx`, it will be `application/gpx+xml`.
@@ -79,13 +79,10 @@ public class RouteEvaluator {
     if (result.getPaths() != null && !result.getPaths().isEmpty()) {
       // Get the first route (best route)
       RouteResponsePath route = result.getPaths().get(0);
-      var allPoints = (List<List<Double>>) ((Map<String, Object>) route.getPoints()).get(
-          "coordinates");
 
       // Access route information like distance, time, and geometry
       return new Route(
           stops,
-          allPoints.stream().map(x -> new Location(x.get(0), x.get(1))).toList(),
           route.getDistance()
       );
     }
