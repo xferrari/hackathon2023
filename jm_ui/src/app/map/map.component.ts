@@ -47,8 +47,8 @@ export class MapComponent implements OnInit {
   }
 
   onRouteButtonClick(): void {
-    const startPoint = L.latLng(37.7749, -122.4194); // Example start point coordinates
-    const endPoint = L.latLng(37.3382, -121.8863);   // Example end point coordinates
+    const startPoint = L.latLng(48.2144935, 16.3760585); // Example start point coordinates
+    const endPoint = L.latLng(48.40178485, 15.984785550000007);   // Example end point coordinates
 
     this.createRouting(startPoint, endPoint);
   }
