@@ -25,4 +25,7 @@ public class Route {
         return path;
     }
 
+    public double getCosts() {
+        return costs;
+    }
 }
