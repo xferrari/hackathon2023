@@ -34,11 +34,11 @@ public class RouteContoller {
         innsbruckBregenz.add(new Location(47.50311, 9.7471));
         Route route1 = RouteEvaluator.getFullRouteInformation(innsbruckBregenz);
 
-        var locations = List.of(
+        var viennaStPoelten = List.of(
                 new Location(48.21612, 16.373137),
                 new Location(48.203530, 15.638170)
         );
-        Route route2 = RouteEvaluator.getFullRouteInformation(locations);
+        Route route2 = RouteEvaluator.getFullRouteInformation(viennaStPoelten);
 
         List<Route> listOfTheList = new ArrayList<>();
         listOfTheList.add(route1);
