@@ -6,6 +6,9 @@ public class Route {
     List<Location> targets;
     double costs;
 
+    public Route() {
+    }
+
     public Route(List<Location> targets, double costs) {
         this.targets = targets;
         this.costs = costs;

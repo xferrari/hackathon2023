@@ -33,7 +33,7 @@ public class RouteContoller {
 
     @GetMapping("/api/initial")
     @ResponseBody
-    public String getInitData() throws JsonProcessingException, RouteNotFoundException, ApiException {
+    public ResponseEntity<List<Route>> getInitData() throws JsonProcessingException, RouteNotFoundException, ApiException {
         List<Location> list1= new ArrayList<>();
         list1.add(new Location(48.21612, 16.373137));
         list1.add(new Location(48.4017869, 15.9847379));
@@ -60,7 +60,7 @@ public class RouteContoller {
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-        return mapper.writeValueAsString(listOfTheList);
+        return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
     }
 
     @GetMapping("/api/route")
@@ -83,8 +83,9 @@ public class RouteContoller {
             routesWithCosts.add(RouteEvaluator.getFullRouteInformation(route.getTargets()));
         }
 
-        var size = routesWithCosts.size();
+        var size = 0;
         do {
+            size = routesWithCosts.size();
             mergeRoutes1(routesWithCosts);
         } while (size > routesWithCosts.size());
 
