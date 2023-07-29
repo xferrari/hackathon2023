@@ -55,16 +55,6 @@ export class MapComponent implements OnInit {
       waypoints: [startCoord, endCoord],
       routeWhileDragging: true // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
-
-    this.routingControl.on('routeselected', (e: any) => {
-      const route = e.route;
-      const waypoints = route.waypoints;
-
-      waypoints.forEach((waypoint: any) => {
-        waypoint.marker.setIcon(waypoint.options.icon || L.divIcon({ className: 'waypoint-icon' }));
-      });
-    });
-
   }
 
 
