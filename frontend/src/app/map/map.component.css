@@ -1,7 +1,7 @@
 .map-container {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 15%;
   right: 0;
   bottom: 0;
   margin: 30px;
@@ -14,4 +14,24 @@
 
 #map {
   height: 100%;
+}
+
+.menu-container {
+  position: absolute;
+  margin: 30px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: 2px;
+}
+
+.menu-frame{
+  position: fixed;
+  border: 2px solid black;
+  width: 250px;
+  height: 100%;
+}
+
+button {
+  margin-bottom: 10px;
 }
