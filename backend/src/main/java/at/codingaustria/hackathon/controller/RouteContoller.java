@@ -87,7 +87,7 @@ public class RouteContoller {
         list4.add(new Location(47.7766024, 17.0326694));
         list4.add(new Location(47.6000949, 16.6252523));
         list4.add(new Location(47.8966677, 16.6438987));
-        Route route4 = RouteEvaluator.getFullRouteInformation(list1);
+        Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
         List<Route> listOfTheList = new ArrayList<>();
 
@@ -128,7 +128,6 @@ public class RouteContoller {
             size = routesWithCosts.size();
             mergeRoutes1(routesWithCosts);
         } while (size > routesWithCosts.size());
-
 
         return new ResponseEntity<>(routesWithCosts, HttpStatus.OK);
     }

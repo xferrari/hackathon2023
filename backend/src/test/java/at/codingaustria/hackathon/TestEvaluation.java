@@ -29,4 +29,22 @@ public class TestEvaluation {
         List<Location> a = RouteCompatator.compareRoutes(locations, locations2).getTargets();
         assertEquals(6, a.size());
     }
+
+    @Test
+    public void testDoubledValues() throws RouteNotFoundException, ApiException {
+        var locations = List.of(
+                new Location(48.1082, 16.2738),
+                new Location(48.2082, 16.3738),
+                new Location(47.2692, 11.4041)
+        );
+
+        var locations2 = List.of(
+                new Location(48.1082, 16.2738),
+                new Location(48.2082, 16.3738),
+                new Location(47.2692, 11.4041)
+        );
+
+        List<Location> a = RouteCompatator.compareRoutes(locations, locations2);
+        assertEquals(3, a.size());
+    }
 }
