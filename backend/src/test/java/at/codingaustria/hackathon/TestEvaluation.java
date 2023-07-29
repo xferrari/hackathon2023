@@ -26,7 +26,7 @@ public class TestEvaluation {
                 new Location(47.1592, 11.3141)
         );
 
-        List<Location> a = RouteCompatator.compareRoutes(locations, locations2);
+        List<Location> a = RouteCompatator.compareRoutes(locations, locations2).getTargets();
         assertEquals(6, a.size());
     }
 }

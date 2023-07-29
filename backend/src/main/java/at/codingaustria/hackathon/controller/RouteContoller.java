@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.graphhopper.directions.api.client.ApiException;
+import java.util.stream.DoubleStream;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -121,7 +122,9 @@ public class RouteContoller {
         }
 
         var size = 0;
+        var counter = 0;
         do {
+            counter++;
             size = routesWithCosts.size();
             mergeRoutes1(routesWithCosts);
         } while (size > routesWithCosts.size());
@@ -136,7 +139,9 @@ public class RouteContoller {
         Route route2Merged = null;
         for (var route1 : routes) {
             for (var route2 : routes) {
-                var merged = RouteEvaluator.getFullRouteInformation(RouteCompatator.compareRoutes(route1.getTargets(), route2.getTargets()));
+                if (route1.equals(route2))
+                    continue;
+                var merged = RouteCompatator.compareRoutes(route1.getTargets(), route2.getTargets());
 
                 if (merged.getCosts() < (route1.getCosts() + route2.getCosts())) {
                     mergedRoute = merged;
