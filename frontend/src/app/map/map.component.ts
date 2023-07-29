@@ -1,11 +1,12 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
+import { BackendService } from '../service/backend.service';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
   private map!: L.Map;
@@ -15,7 +16,10 @@ export class MapComponent implements OnInit {
   private readonly defaultLng = 16.3760585;
   private readonly defaultZoom = 13;
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(
+    private elementRef: ElementRef,
+    private backendService: BackendService
+  ) {}
 
   isColorblindModeActive = true;
 
@@ -25,10 +29,12 @@ export class MapComponent implements OnInit {
 
   private initMap(): void {
     // Create the map
-    this.map = L.map(this.elementRef.nativeElement.querySelector('#map')).setView([this.defaultLat, this.defaultLng], this.defaultZoom);
+    this.map = L.map(
+      this.elementRef.nativeElement.querySelector('#map')
+    ).setView([this.defaultLat, this.defaultLng], this.defaultZoom);
     // Add OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
+      attribution: '&copy; OpenStreetMap contributors',
     }).addTo(this.map);
   }
 
@@ -43,7 +49,7 @@ export class MapComponent implements OnInit {
       iconUrl: 'assets/marker-icon.png',
       iconSize: [32, 32],
       iconAnchor: [16, 32],
-      popupAnchor: [0, -32]
+      popupAnchor: [0, -32],
     });
 
     const startCoord = L.latLng([start.lat, start.lng]);
@@ -55,36 +61,45 @@ export class MapComponent implements OnInit {
 
     this.routingControl = L.Routing.control({
       waypoints: [startCoord, endCoord],
-      itineraryClassName: "oida",
-      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
+      itineraryClassName: 'oida',
+      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
 
     L.Routing.control({
       waypoints: [endCoord, startCoord],
-      itineraryClassName: "oida",
+      itineraryClassName: 'oida',
 
-      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
+      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
 
     L.Routing.control({
-      waypoints: [L.latLng(47.9988284, 16.856114), L.latLng(48.3772609, 16.3218755)],
-      itineraryClassName: "oida",
+      waypoints: [
+        L.latLng(47.9988284, 16.856114),
+        L.latLng(48.3772609, 16.3218755),
+      ],
+      itineraryClassName: 'oida',
       lineOptions: {
-        styles: [{color: 'green', opacity: 0.8, weight: 2}],
+        styles: [{ color: 'green', opacity: 0.8, weight: 2 }],
         extendToWaypoints: true,
-        missingRouteTolerance: 0
+        missingRouteTolerance: 0,
       },
-      routeWhileDragging: true // Enable real-time route updates while dragging waypoints
+      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
     }).addTo(this.map);
   }
 
-
-
   onRouteButtonClick(): void {
     const startPoint = L.latLng(48.2144935, 16.3760585); // Example start point coordinates
-    const endPoint = L.latLng(48.40178485, 15.984785550000007);   // Example end point coordinates
+    const endPoint = L.latLng(48.40178485, 15.984785550000007); // Example end point coordinates
 
     this.createRouting(startPoint, endPoint);
+    let data;
+
+    data = this.backendService.getRoutes().subscribe((response) => {
+      console.log(response);
+      return response;
+    });
+
+    console.log(data);
   }
 
   // Function to toggle colorblind-friendly mode
