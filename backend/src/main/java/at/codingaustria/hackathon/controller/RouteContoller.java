@@ -38,7 +38,7 @@ public class RouteContoller {
                 new Location(48.21612, 16.373137),
                 new Location(48.203530, 15.638170)
         );
-        Route route2 = RouteEvaluator.getFullRouteInformation(innsbruckBregenz);
+        Route route2 = RouteEvaluator.getFullRouteInformation(locations);
 
         List<Route> listOfTheList = new ArrayList<>();
         listOfTheList.add(route1);
