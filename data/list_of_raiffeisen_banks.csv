@@ -1,0 +1,350 @@
+Bundesland;BLZ;Name;Adresse ;PLZ;Ort;FN;Info;coordinates;Latitude;Longitude
+NÖW;32000;RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG;Friedrich-Wilhelm-Raiffeisenplatz 1;1020;Wien;203160s;;(48.21612, 16.373137);48.21612;16.373137
+NÖW;32002;Raiffeisenbank Region Wagram eGen;Bahnhofstraße 25;3462;Absdorf;46074g;;(48.4017869, 15.9847379);48.4017869;15.9847379
+NÖW;32025;Raiffeisenbank Region Amstetten eGen;Raiffeisenplatz 1;3300;Amstetten;76982i;;(48.1245335, 14.8823511);48.1245335;14.8823511
+NÖW;32039;Raiffeisenbank Auersthal-Bockfließ-Groß Schweinbarth eGen;Hauptstraße 78;2214;Auersthal;54375p;;(48.3739927, 16.6357775);48.3739927;16.6357775
+NÖW;32045;Raiffeisenbank Region Baden eGen;Raiffeisenplatz 1;2500;Baden bei Wien;109921z;;(48.0053016, 16.231961);48.0053016;16.231961
+NÖW;32059;Raiffeisenkasse Blindenmarkt eGen;Hauptstraße 40;3372;Blindenmarkt;78998z;;(48.1285398, 14.9867128);48.1285398;14.9867128
+NÖW;32073;Raiffeisenbank Bruck-Carnuntum eGen;Raiffeisenplatz 1;2460;Bruck/Leitha;96390a;;(48.0222287, 16.7778964);48.0222287;16.7778964
+NÖW;32092;Raiffeisen-Regionalbank Gänserndorf eGen;Bahnstraße 8;2230;Gänserndorf;54296y;;(48.3410712, 16.7213269);48.3410712;16.7213269
+NÖW;32099;Raiffeisenkasse Dobersberg-Waldkirchen eGen;Hauptplatz 20;3843;Dobersberg;49453a;;(48.9152346, 15.3225069);48.9152346;15.3225069
+NÖW;32123;Raiffeisenbank Eggenburg eGen;Hauptplatz 24-26;3730;Eggenburg;45646b;;(48.6432495, 15.8172107);48.6432495;15.8172107
+NÖW;32127;Raiffeisenbank Thayatal-Mitte eGen;Hauptplatz 11;3820;Raabs/Thaya;45244k;;(48.8470994, 15.4938606);48.8470994;15.4938606
+NÖW;32145;Raiffeisenkasse Ernstbrunn eGen;Hauptplatz 11;2115;Ernstbrunn;54871v;;(48.527794, 16.3619866);48.527794;16.3619866
+NÖW;32195;Raiffeisenbank NÖ-Süd Alpin eGen;Bahnstraße 3;2870;Aspang;109814t;;(47.5562952, 16.090629);47.5562952;16.090629
+NÖW;32250;Raiffeisen Regionalbank Mödling eGen;Hauptstraße 27-29;2340;Mödling;99100k;;(48.0863213, 16.291321);48.0863213;16.291321
+NÖW;32275;Raiffeisenbank Seefeld-Hadres eGen;Hauptplatz 103;2061;Hadres;57122d;;(48.70419, 16.09912);48.70419;16.09912
+NÖW;32278;Raiffeisenkasse Haidershofen eGen;Haidershofen 100;4431;Haidershofen;77703w;;(48.0743911, 14.4602835);48.0743911;14.4602835
+NÖW;32286;Raiffeisenkasse Heiligeneich eGen;Raiffeisenplatz 1;3452;Atzenbrugg;78889p;;(48.3006298, 15.8938822);48.3006298;15.8938822
+NÖW;32300;RAIFFEISEN-HOLDING NIEDERÖSTERREICH-WIEN registrierte Genossenschaft mit beschränkter Haftung;Friedrich-Wilhelm-Raiffeisen-Platz 1;1020;Wien;95970h;;(48.2145771, 16.3760679);48.2145771;16.3760679
+NÖW;32322;Raiffeisenbank Hollabrunn eGen;Raiffeisenplatz 1;2020;Hollabrunn;57796w;;(48.56526, 16.0799974);48.56526;16.0799974
+NÖW;32367;Raiffeisenbank Klosterneuburg eGen;Rathausplatz 7;3400;Klosterneuburg;98295b;;(48.3054892, 16.3243514);48.3054892;16.3243514
+NÖW;32395;Raiffeisenbank Korneuburg eGen;Stockerauer Straße 94;2100;Korneuburg;55220g;;(48.3738038, 16.3137991);48.3738038;16.3137991
+NÖW;32397;Raiffeisenbank Krems eGen;Dreifaltigkeitsplatz 8;3500;Krems/Donau;35708m;;(48.4105642, 15.6008057);48.4105642;15.6008057
+NÖW;32413;Raiffeisenbank Laa/Thaya eGen;Stadtplatz 56;2136;Laa/Thaya;55870m;;(48.7220542, 16.3847015);48.7220542;16.3847015
+NÖW;32415;Raiffeisenbank Oberes Waldviertel eGen;Hauptplatz 22;3943;Schrems;44605x;;(48.7926585, 15.0718881);48.7926585;15.0718881
+NÖW;32426;Raiffeisenbank Langenlois eGen;Kornplatz 9;3550;Langenlois;47224y;;(48.4735719, 15.6774994);48.4735719;15.6774994
+NÖW;32438;Raiffeisenbank Kreuzenstein eGen;Stockerauer Straße 8-10;2100;Korneuburg;53300h;;(48.3772609, 16.3218755);48.3772609;16.3218755
+NÖW;32447;Raiffeisenbank Traisen-Gölsental eGen;Babenbergerstraße 5;3180;Lilienfeld;75316i;;(48.0151153, 15.5955874);48.0151153;15.5955874
+NÖW ;32477;Raiffeisenbank Region Schallaburg eGen;Linzer Straße 6;3382;Loosdorf;77781i;;(48.2011966, 15.399002);48.2011966;15.399002
+NÖW;32501;Raiffeisenbank im Weinviertel eGen;Hauptplatz 37;2130;Mistelbach/Zaya;54744g;;(48.383062, 16.51794);48.383062;16.51794
+NÖW;32551;Raiffeisenkasse Neusiedl a.d.Zaya eGen;Hauptplatz 3;2183;Neusiedl/Zaya;54101k;;(48.6018945, 16.7875391);48.6018945;16.7875391
+NÖW;32585;Raiffeisenbank Region St. Pölten eGen;Europaplatz 7;3100;St.Pölten;74508x;;(48.201687, 15.6205591);48.201687;15.6205591
+NÖW;32589;Raiffeisenbank Gross Gerungs eGen;Hauptplatz 47;3920;Groß Gerungs;45757s;;(48.5738605, 14.9570584);48.5738605;14.9570584
+NÖW;32614;Raiffeisenkasse Orth a.d. Donau eGen;Am Markt 21;2304;Orth/Donau;95604w;;(48.1464987, 16.7032167);48.1464987;16.7032167
+NÖW;32647;Raiffeisenbank Pittental/Bucklige Welt eGen;Raiffeisen-Promenade 201;2823;Pitten;109804b;;(47.7157754, 16.1840406);47.7157754;16.1840406
+NÖW;32660;Raiffeisenkasse Pottschach registrierte Genossenschaft mit beschränkter Haftung;Pottschacher Straße 8;2630;Ternitz;109950t;;(47.6997499, 16.0068553);47.6997499;16.0068553
+NÖW;32663;Raiffeisenkasse Poysdorf eGen;Oberer Markt 1;2170;Poysdorf;54528p;;(48.6683946, 16.629288);48.6683946;16.629288
+NÖW;32667;Raiffeisenbank Wienerwald eGen;Hauptstraße 62;3021;Pressbaum;99135m;;(48.1784607, 16.0761195);48.1784607;16.0761195
+NÖW;32715;Raiffeisenkasse Retz-Pulkautal registrierte Genossenschaft mit beschränkter Haftung;Hauptplatz 30;2070;Retz;55954k;;(48.757497, 15.950493);48.757497;15.950493
+NÖW;32823;Raiffeisenbank Region Schwechat eGen;Bruck-Hainburger Straße 5;2320;Schwechat;94171m;;(48.1409306, 16.4789943);48.1409306;16.4789943
+NÖW;32842;Raiffeisenbank Stockerau eGen;Rathausplatz 2;2000;Stockerau;51847x;;(48.3848633, 16.2069761);48.3848633;16.2069761
+NÖW;32865;Raiffeisenbank Schneebergland eGen;Raiffeisenstraße 2;2620;Neunkirchen;106928y;;(47.7198373, 16.0836011);47.7198373;16.0836011
+NÖW;32880;Raiffeisenbank Tulln eGen;Bahnhofstraße 9;3430;Tulln;75182m;;(48.3304118, 16.0540301);48.3304118;16.0540301
+NÖW;32901;Raiffeisenbank Vitis eGen;Hauptplatz 30;3902;Vitis;35645w;;(48.7590228, 15.1823744);48.7590228;15.1823744
+NÖW;32904;Raiffeisenbank Waidhofen a. d. Thaya eGen;Raiffeisenpromenade 1;3830;Waidhofen/Thaya;35619g;;(48.8139339, 15.2827204);48.8139339;15.2827204
+NÖW;32906;Raiffeisenbank Ybbstal eGen;Oberer Stadtplatz 22;3340;Waidhofen/Ybbs;78842w;;(47.9604077, 14.7752319);47.9604077;14.7752319
+NÖW;32937;Raiffeisenregionalbank Wiener Neustadt eGen;Hauptplatz 28;2700;Wiener Neustadt;107016b;;(47.8127391, 16.2441975);47.8127391;16.2441975
+NÖW;32939;Raiffeisenbank Mittleres Mostviertel eGen;Scheibbser Straße 4;3250;Wieselburg/Erl.;79054g;;(48.1299635, 15.1384005);48.1299635;15.1384005
+NÖW;32940;Raiffeisenkasse Wiesmath-Hochwolkersdorf eGen;Hauptstraße 12;2811;Wiesmath;109696v;;(47.6166436, 16.2877473);47.6166436;16.2877473
+NÖW;32951;Raiffeisenbank Wolkersdorf eGen;Hauptstraße 5;2120;Wolkersdorf;57838g;;(48.3849738, 16.5159987);48.3849738;16.5159987
+NÖW;32985;Raiffeisenbank Weinviertel Nordost eGen ;Hauptstraße 39;2225;Zistersdorf;55056s;;(48.5458569, 16.7634695);48.5458569;16.7634695
+NÖW;32990;Raiffeisenbank Region Waldviertel Mitte eGen;Landstraße 23;3910;Zwettl/NÖ;49470a;;(48.6040571, 15.166729);48.6040571;15.166729
+BGLD;33000;Raiffeisenlandesbank Burgenland und Revisionsverband eGen;Raiffeisenstraße 1;7000;Eisenstadt;121834v;;(47.845516, 16.516668);47.845516;16.516668
+BGLD;33002;Raiffeisenbank Seewinkel-Hansag eGen;Höchtlgasse 6;7163;Andau;126965p;;(47.7766024, 17.0326694);47.7766024;17.0326694
+BGLD;33010;Raiffeisenbank Region Deutschkreutz-Horitschon eGen;Hauptstraße 49;7301;Deutschkreutz;124705s;;(47.6000949, 16.6252523);47.6000949;16.6252523
+BGLD;33012;Raiffeisenbank Neusiedlersee-Hügelland eGen;Hauptstraße 39;7082;Donnerskirchen;124097x;;(47.8966677, 16.6438987);47.8966677;16.6438987
+BGLD;33014;Raiffeisenbank Draßmarkt-Kobersdorf-St. Martin eGen;Hauptstraße 29;7372;Draßmarkt;124934b;;(47.5124044, 16.4037569);47.5124044;16.4037569
+BGLD;33027;Raiffeisenbezirksbank Güssing eGen;Hauptstraße 3;7540;Güssing;122891y;;(47.0581888, 16.3209767);47.0581888;16.3209767
+BGLD;33033;Raiffeisenbank Neusiedlersee-Seewinkel eGen;Hauptplatz 4;7142;Illmitz;123449v;;(47.7618192, 16.7995252);47.7618192;16.7995252
+BGLD;33038;Raiffeisenbank Dreiländereck Bgld-Nord eGen;Untere Hauptstrasse 36;2425;Nickelsdorf/L.;124790s;;(47.9374695, 17.0773074);47.9374695;17.0773074
+BGLD;33048;Raiffeisenbank Lutzmannsburg - Frankenau eGen;Hauptstraße 25;7361;Lutzmannsburg;126941d;;(47.4639108, 16.635228);47.4639108;16.635228
+BGLD;33065;Raiffeisenbank Burgenland Mitte eGen;Hauptstraße 34;7350;Oberpullendorf;124617k;;(47.4999901, 16.5055746);47.4999901;16.5055746
+BGLD;33072;Raiffeisenbank Region Parndorf eGen;Hauptstraße 63;7111;Parndorf;126664x;;(47.9988284, 16.856114);47.9988284;16.856114
+BGLD;33078;Raiffeisenbank Purbach eGen;Hauptgasse 19;7083;Purbach/N.See;124715f;;(47.9132088, 16.6957113);47.9132088;16.6957113
+BGLD;33090;Raiffeisenbank Heideboden eGen;Wiener Straße 3;7161;St.Andrä/Zicksee;124747b;;(47.7858704, 16.9405764);47.7858704;16.9405764
+BGLD;33106;Raiffeisenbank Weiden am See eGen;Schulzeile 1;7121;Weiden/See;124436w;;(47.9270377, 16.867623);47.9270377;16.867623
+BGLD;33116;Raiffeisenbank Frauenkirchen-Mönchhof-Podersdorf am See eGen;Amtshausgasse 2;7132;Frauenkirchen;126036y;;(47.8370537, 16.9264477);47.8370537;16.9264477
+BGLD;33125;Raiffeisenbezirksbank Oberwart eGen;Wiener Straße 5;7400;Oberwart;126950t;;(47.2892035, 16.2098419);47.2892035;16.2098419
+OÖ;34000;Raiffeisenlandesbank Oberösterreich Aktiengesellschaft;Europaplatz 1a, Postfach 455;4020;Linz;247579m;;(48.29883, 14.3018734);48.29883;14.3018734
+OÖ;34016;Raiffeisenbank Aspach-Wildenau eGen;Marktplatz 3;5252;Aspach;110403h;;(48.1843141, 13.3046345);48.1843141;13.3046345
+OÖ;34030;Raiffeisenbank Region Altheim eGen;Braunauer Straße 22;4950;Altheim;111229y;;(48.2492526, 13.2284162);48.2492526;13.2284162
+OÖ;34060;Raiffeisenbank Region Braunau eGen;Salzburger Straße 4;5280;Braunau am Inn;110979f;;(48.2549773, 13.0356323);48.2549773;13.0356323
+OÖ;34068;Raiffeisenbank Grein eGen;Hauptstraße 25;4360;Grein;77454d;;(48.2286837, 14.8567976);48.2286837;14.8567976
+OÖ;34075;Raiffeisenbank Donau-Ameisberg eGen;Marktplatz 10;4152;Sarleinsbach;75377z;;(48.5458137, 13.9048214);48.5458137;13.9048214
+OÖ;34080;Raiffeisenbank Ennstal eGen;Kirchenplatz 11;4452;Ternberg;121230f;;(47.9455991, 14.3571401);47.9455991;14.3571401
+OÖ;34081;Raiffeisenbank Eberschwang eGen;Eberschwang 116;4906;Eberschwang;110648v;;(48.153605, 13.5610687);48.153605;13.5610687
+OÖ;34083;Raiffeisenbank Edt-Lambach eGen;Marktplatz 14;4650;Lambach;95249y;;(48.0912432, 13.873684);48.0912432;13.873684
+OÖ;34100;Raiffeisenbank Feldkirchen-Goldwörth eGen;Hauptstraße 2;4101;Feldkirchen an der Donau;77923v;;(48.3457864, 14.0528836);48.3457864;14.0528836
+OÖ;34110;Raiffeisenbank Region Freistadt eGen;Linzer Straße 15;4240;Freistadt;77599t;;(48.5069245, 14.5031102);48.5069245;14.5031102
+OÖ;34111;Raiffeisenbank Region Gallneukirchen eGen;Reichenauerstraße 6-8;4210;Gallneukirchen;78373f;;(48.3537503, 14.4159019);48.3537503;14.4159019
+OÖ;34113;Raiffeisenbank Gampern eGen;Gampern 70;4851;Gampern;94721x;;(47.988194, 13.553559);47.988194;13.553559
+OÖ;34114;Raiffeisenbank Steyr eGen;Stadtplatz 46;4400;Steyr;120922b;;(48.0382709, 14.4183992);48.0382709;14.4183992
+OÖ;34118;Raiffeisenbank Geretsberg eGen;Geretsberg 3;5132;Geretsberg;111163a;;(48.0898435, 12.9378126);48.0898435;12.9378126
+OÖ;34127;Raiffeisenbank Almtal eGen;Im Dorf 15;4645;Grünau im Almtal;94292s;;(47.8548418, 13.9559504);47.8548418;13.9559504
+OÖ;34129;Raiffeisenbank Gunskirchen eGen;Raiffeisenplatz 1;4623;Gunskirchen;94301d;;(48.1326845, 13.9420725);48.1326845;13.9420725
+OÖ;34135;Raiffeisenbank Gramastetten-Herzogsdorf eGen;Marktstraße 41;4201;Gramastetten;75958d;;(48.3803744, 14.1916111);48.3803744;14.1916111
+OÖ;34155;Raiffeisenbank Handenberg - St. Georgen a. F. eGen;Baumgartnerstraße 1;5144;Handenberg;110723d;;(48.133625, 13.0058811);48.133625;13.0058811
+OÖ;34165;Raiffeisenbank Hinterstoder und Vorderstoder eGen;Hinterstoder 19;4573;Hinterstoder;121031m;;(47.6997661, 14.1547865);47.6997661;14.1547865
+OÖ;34170;Raiffeisenbank Hörsching-Thening eGen;Ofteringer Straße 1;4063;Hörsching;77946b;;(48.2264714, 14.1759213);48.2264714;14.1759213
+OÖ;34180;Raiffeisenbank Region Eferding eGen;Schiferplatz 24;4070;Eferding;94469a;;(48.3069537, 14.0243534);48.3069537;14.0243534
+OÖ;34200;Raiffeisenbank Innkreis Mitte eGen;Ort 7;4974;Ort im Innkreis;110295z;;(48.3166906, 13.4092742);48.3166906;13.4092742
+OÖ;34214;Raiffeisenbank Kematen-Neuhofen eGen;Steyrer Straße 1;4501;Neuhofen an der Krems;120906d;;(48.1385777, 14.2313569);48.1385777;14.2313569
+OÖ;34226;Raiffeisenbank Kleinmünchen/Linz eGen;Salzburger Straße 5, Postfach 16;4030;Linz;75104y;;(48.273063, 14.3129426);48.273063;14.3129426
+OÖ;34231;Raiffeisenbank Kollerschlag eGen;Markt 4;4154;Kollerschlag;77552y;;(48.6052852, 13.8419124);48.6052852;13.8419124
+OÖ;34250;Raiffeisenbank Region Hausruck eGen;Marktplatz 6;4680;Haag am Hausruck;93474m;;(48.1852147, 13.6406942);48.1852147;13.6406942
+OÖ;34276;Raiffeisenbank Leonding eGen;Stadtplatz 4;4060;Leonding;77867k;;(48.279785, 14.2483902);48.279785;14.2483902
+OÖ;34277;Raiffeisenbank Region Bad Leonfelden eGen;Hauptplatz 2;4190;Bad Leonfelden;77998d;;(48.5228826, 14.2930252);48.5228826;14.2930252
+OÖ;34284;Raiffeisenbank Lohnsburg eGen;Marktplatz 90;4923;Lohnsburg;111121p;;(48.1439074, 13.4041657);48.1439074;13.4041657
+OÖ;34290;Raiffeisenbank Lochen am See eGen;Ringstraße 5;5221;Lochen am See;111129a;;(48.0084578, 13.1794708);48.0084578;13.1794708
+OÖ;34300;Raiffeisenbank Region Neufelden eGen;Wimbergstraße 1;4171;St. Peter am Wimberg;77626g;;(48.5020044, 14.0818379);48.5020044;14.0818379
+OÖ;34303;Raiffeisenbank Mattigtal eGen;Hauptstraße 61;5231;Schalchen;111408k;;(48.1171595, 13.1558748);48.1171595;13.1558748
+OÖ;34312;Raiffeisenbank Maria Schmolln-St. Johann eGen;Maria Schmolln 68;5241;Maria Schmolln;110642i;;(48.1395295, 13.2163189);48.1395295;13.2163189
+OÖ;34313;Raiffeisenbank Meggenhofen-Kematen eGen;Meggenhofen 55;4714;Meggenhofen;94688y;;(48.1800775, 13.7943541);48.1800775;13.7943541
+OÖ;34322;Raiffeisenbank Mondseeland eGen;Rainerstraße 11, Postfach 29;5310;Mondsee;93513w;;(47.8549843, 13.3487574);47.8549843;13.3487574
+OÖ;34330;Raiffeisenbank Mühlviertler Alm eGen;Schulstraße 2;4280;Königswiesen;77513s;;(48.4077464, 14.8389954);48.4077464;14.8389954
+OÖ;34356;Raiffeisenbank Neukirchen an der Vöckla eGen;Hauptstraße 22;4872;Neukirchen an der Vöckla;94138p;;(48.0418178, 13.5380489);48.0418178;13.5380489
+OÖ;34363;Raiffeisenbank Attersee-Süd eGen;Dorfstraße 50;4865;Nußdorf am Attersee;91728w;;(47.8817434, 13.5226657);47.8817434;13.5226657
+OÖ;34370;Raiffeisenbank Oberes Innviertel eGen;Siedlungsstraße 1;5142;Eggelsberg;110546v;;(48.0815877, 12.991865);48.0815877;12.991865
+OÖ;34380;Raiffeisenbank Region Kirchdorf eGen; Hauptplatz 29;4560;Kirchdorf an der Krems;120863s;;(47.9037895, 14.1236492);47.9037895;14.1236492
+OÖ;34383;Raiffeisenbank Mittleres Rodltal eGen;Marktplatz 44;4181;Oberneukirchen;77965f;;(48.450014, 14.216697);48.450014;14.216697
+OÖ;34390;Raiffeisenbank Ohlsdorf eGen;Hauptstraße 22;4694;Ohlsdorf;94199d;;(47.9608118, 13.792255);47.9608118;13.792255
+OÖ;34410;Raiffeisenbank Region Rohrbach eGen;Stadtplatz 30;4150;Rohrbach-Berg;77818p;;(48.5728735, 13.9901938);48.5728735;13.9901938
+OÖ;34434;Raiffeisenbank Pöndorf - Frankenmarkt eGen;Pöndorf 4;4891;Pöndorf;93840a;;(47.9972688, 13.3690714);47.9972688;13.3690714
+OÖ;34437;Raiffeisenbank Prambachkirchen eGen;Hauptstraße 18;4731;Prambachkirchen;94262x;;(48.3144348, 13.9048855);48.3144348;13.9048855
+OÖ;34438;Raiffeisenbank Pramet eGen;Pramet 2;4925;Pramet;111146a;;(48.1393959, 13.4858897);48.1393959;13.4858897
+OÖ;34442;Raiffeisenbank Peuerbach eGen;Hauptstraße 14/1, Postfach 22;4722;Peuerbach;95178v;;(48.3442605, 13.7717578);48.3442605;13.7717578
+OÖ;34450;Raiffeisenbank Region Ried i.I. eGen;Friedrich-Thurner-Straße 14;4910;Ried im Innkreis;110468d;;(48.2117587, 13.4850485);48.2117587;13.4850485
+OÖ;34455;Raiffeisenbank Region Schärding eGen;Oberer Stadtplatz 42, Postfach 128;4780;Schärding;111211x;;(48.4565731, 13.4314465);48.4565731;13.4314465
+OÖ;34460;Raiffeisenbank Region Pregarten eGen;Stadtplatz 17;4230;Pregarten;78388b;;(48.3552972, 14.5309811);48.3552972;14.5309811
+OÖ;34491;Raiffeisenbank Windischgarsten eGen;Bahnhofstraße 6;4580;Windischgarsten;121233i;;(47.7210872, 14.3279933);47.7210872;14.3279933
+OÖ;34510;Raiffeisenbank Salzkammergut eGen;Schiffslände 5;4810;Gmunden;93890z;;(47.9175693, 13.8024904);47.9175693;13.8024904
+OÖ;34521;Raiffeisenbank St. Agatha eGen;Stauffstraße 8;4084;St. Agatha;94208t;;(48.3862768, 13.8792463);48.3862768;13.8792463
+OÖ;34522;Raiffeisenbank St.Florian am Inn eGen;St. Florian 50;4782;St. Florian am Inn;110326w;;(42.945574, -78.886241);42.945574;-78.886241
+OÖ;34523;Raiffeisenbank Attergau eGen;Attergaustraße 38a;4880;St. Georgen im Attergau;94574f;;(47.9351979, 13.4878211);47.9351979;13.4878211
+OÖ;34530;Raiffeisenbank St. Marien eGen;St. Marien 19;4502;St. Marien;120908g;;(48.146204, 14.279465);48.146204;14.279465
+OÖ;34540;Raiffeisenbank St. Roman eGen;Altendorf 29;4793;St. Roman bei Schärding;110732t;;(48.4815241, 13.6125275);48.4815241;13.6125275
+OÖ;34545;Raiffeisenbank Inneres Salzkammergut eGen;Kreuzplatz 20;4820;Bad Ischl;94984h;;(47.7129306, 13.6216477);47.7129306;13.6216477
+OÖ;34560;Raiffeisenbank Region Sierning-Enns eGen;Neustraße 5, Postfach 35;4522;Sierning;123110w;;(48.0437129, 14.3089648);48.0437129;14.3089648
+OÖ;34608;Raiffeisenbank Attersee-Nord eGen;Raiffeisenplatz 1;4863;Seewalchen am Attersee;94993x;;(47.9498451, 13.5940043);47.9498451;13.5940043
+OÖ;34613;Raiffeisenbank Schwertberg eGen;Bahnhofstraße 8;4311;Schwertberg;78084f;;(48.2730795, 14.5808235);48.2730795;14.5808235
+OÖ;34630;Raiffeisenbank Region Schwanenstadt eGen;Stadtplatz 25-26;4690;Schwanenstadt;94698m;;(48.0557989, 13.7759344);48.0557989;13.7759344
+OÖ;34633;Raiffeisenbank Steinbach-Grünburg eGen;Ortsplatz 2;4596;Steinbach an der Steyr;121332f;;(47.9696648, 14.2666683);47.9696648;14.2666683
+OÖ;34669;Raiffeisenbank Timelkam-Lenzing-Puchkirchen eGen;Pollheimerstraße 1;4850;Timelkam;95196w;;(48.0013716, 13.6117924);48.0013716;13.6117924
+OÖ;34680;Raiffeisenbank Wels eGen;Kaiser Josef-Platz 58, Postfach 10;4601;Wels;94566v;;(48.1605848, 14.0253605);48.1605848;14.0253605
+OÖ;34710;Raiffeisenbank Region Vöcklabruck eGen;Salzburger Straße 1;4840;Vöcklabruck;95023s;;(48.0068439, 13.6529782);48.0068439;13.6529782
+OÖ;34732;Raiffeisenbank Walding-Ottensheim eGen;Raiffeisenplatz 2;4111;Walding;77850k;;(48.350627, 14.1602548);48.350627;14.1602548
+OÖ;34735;Raiffeisenbank Waldzell eGen;Hofmark 8;4924;Waldzell;111059y;;(48.1357323, 13.4274048);48.1357323;13.4274048
+OÖ;34736;Raiffeisenbank Region Grieskirchen eGen;Roßmarkt 11;4710;Grieskirchen;94978z;;(48.2339462, 13.8311849);48.2339462;13.8311849
+OÖ;34738;Raiffeisenbank Wartberg an der Krems eGen;Hauptstraße 23;4552;Wartberg an der Krems;121568b;;(47.9886791, 14.1191009);47.9886791;14.1191009
+OÖ;34741;Raiffeisenbank Weißkirchen a.d. Traun eGen;Raiffeisenweg 1;4616;Weißkirchen an der Traun;94663k;;(48.1634725, 14.1203887);48.1634725;14.1203887
+OÖ;34747;Raiffeisenbank Weyer eGen;Marktplatz 11;3335;Weyer;121076d;;(47.8579774, 14.664557);47.8579774;14.664557
+OÖ;34750;Raiffeisenbank Bad Wimsbach-Neydharting eGen;Markt 23;4654;Bad Wimsbach-Neydharting;94065g;;(48.0635277, 13.9016223);48.0635277;13.9016223
+OÖ;34770;Raiffeisenbank Wels Süd eGen;Pater-Bernhard-Rodlberger-Straße 25;4600;Thalheim bei Wels;93799s;;(48.1532573, 14.030668);48.1532573;14.030668
+OÖ;34777;Raiffeisenbank Perg eGen;Linzer Straße 14;4320;Perg;77682p;;(48.2505098, 14.6316732);48.2505098;14.6316732
+OÖ;34796;Raiffeisenlandesbank Oberösterreich AG;Europaplatz 1a;4020;Linz;247579m;Bank Direkt;(48.29883, 14.3018734);48.29883;14.3018734
+SBG;35000;Raiffeisenverband Salzburg eGen;Schwarzstraße 13-15, Postfach 6;5020;Salzburg;38219f;;(47.8031826, 13.0417883);47.8031826;13.0417883
+SBG;35001;Raiffeisenbank Abtenau-Rußbach registrierte Genossenschaft mit beschränkter Haftung;Markt 49;5441;Abtenau;37217g;;(47.5638414, 13.3444472);47.5638414;13.3444472
+SBG;35004;Raiffeisenbank Altenmarkt-Flachau-Eben eGen;Marktplatz 5;5541;Altenmarkt;70820y;;(48.3011184, 14.300379);48.3011184;14.300379
+SBG;35005;Raiffeisenbank Anif-Niederalm eGen;Aniferstraße 12;5081;Anif;70068t;;(47.7496606, 13.0635169);47.7496606;13.0635169
+SBG;35006;Raiffeisenbank Annaberg-Lungötz registrierte Genossenschaft mit beschränkter Haftung;Annaberg 125;5524;Annaberg im Lammertal;70375v;;(47.5137593, 13.4309749);47.5137593;13.4309749
+SBG;35007;Raiffeisenbank Anthering - Elixhausen eGen;Salzburgerstraße 6;5102;Anthering;68092k;;(47.8796063, 13.0129025);47.8796063;13.0129025
+SBG;35010;Raiffeisenbank Bischofshofen eGen;Franz-Mohshammer-Platz 7, Postfach 69;5500;Bischofshofen;34830x;;(47.4151114, 13.217832);47.4151114;13.217832
+SBG;35012;Raiffeisenbank Hohe Tauern eGen;Wilhelm-Fazokas-Straße 2c;5710;Kaprun;71071t;;(47.2725003, 12.7588609);47.2725003;12.7588609
+SBG;35015;Raiffeisenbank Flachgau Mitte eGen;Dorf 1;5301;Eugendorf;70072y;;(47.8661408, 13.1223795);47.8661408;13.1223795
+SBG;35016;Raiffeisenbank Faistenau-Hintersee eGen;Am Lindenplatz 2;5324;Faistenau;71078b;;(47.7781698, 13.2335098);47.7781698;13.2335098
+SBG;35017;Raiffeisenbank Golling-Scheffau-Kellau registrierte Genossenschaft mit beschränkter Haftung;Markt 45;5440;Golling an der Salzach;68012v;;(47.5984842, 13.1681229);47.5984842;13.1681229
+SBG;35018;Raiffeisenbank Grödig eGen;Hauptstraße 28;5082;Grödig;70037x;;(47.7397403, 13.0359326);47.7397403;13.0359326
+SBG;35019;Raiffeisenbank Großarl-Hüttschlag eGen;Marktstraße 8;5611;Großarl;70102t;;(47.2388959, 13.2003117);47.2388959;13.2003117
+SBG;35020;Raiffeisenbank Großgmain eGen;Salzburger Straße 53;5084;Großgmain;70106y;;(47.7248195, 12.9069175);47.7248195;12.9069175
+SBG;35021;Raiffeisenbank Wallersee eGen;Hauptstraße 39;5203;Neumarkt am Wallersee;70791f;;(47.9448965, 13.2243043);47.9448965;13.2243043
+SBG;35022;Raiffeisenbank Hallein-Oberalm eGen;Robertplatz 1;5400;Hallein;69205y;;(47.6821968, 13.0939645);47.6821968;13.0939645
+SBG;35025;Raiffeisenbank Hof-Koppl-Ebenau eGen;Wolfgangseestraße 26;5322;Hof bei Salzburg;68173f;;(47.8150802, 13.2398354);47.8150802;13.2398354
+SBG;35026;Raiffeisenbank Gastein eGen;Kaiser Franz-Platz 4;5630;Bad Hofgastein;71064g;;(47.171396, 13.1059448);47.171396;13.1059448
+SBG;35027;Raiffeisenbank Hüttau-St. Martin-Niedernfritz registrierte Genossenschaft mit beschränkter Haftung;Hüttau 35;5511;Hüttau;37949h;;(47.4155068, 13.3077188);47.4155068;13.3077188
+SBG;35029;Raiffeisenbank Kuchl-St. Koloman eGen;Markt 222;5431;Kuchl;70108a;;(47.6277964, 13.144578);47.6277964;13.144578
+SBG;35030;Raiffeisenbank Lamprechtshausen-Bürmoos eGen;Hauptstraße 3, Postfach 30;5112;Lamprechtshausen;68161m;;(47.9922411, 12.9560348);47.9922411;12.9560348
+SBG;35038;Raiffeisenbank Michaelbeuern eGen;Michaelbeuern 76;5152;Michaelbeuern;68039h;;(48.019056, 13.0275255);48.019056;13.0275255
+SBG;35039;Raiffeisenbank Oberpinzgau eGen;Kirchgasse 12;5730;Mittersill;70075b;;(47.2798636, 12.4822494);47.2798636;12.4822494
+SBG;35044;Raiffeisenbank Nußdorf eGen;Hauptstraße 1;5151;Nußdorf am Haunsberg;70116m;;(47.9581585, 13.0075942);47.9581585;13.0075942
+SBG;35046;Raiffeisenbank St.Georgen eGen;Dorfplatz 2;5113;St. Georgen;69441w;;(47.9707206, 12.8925829);47.9707206;12.8925829
+SBG;35047;Raiffeisenbank Salzburger Seenland eGen;Hauptstraße 52;5201;Seekirchen am Wallersee;70019w;;(47.8962193, 13.1238216);47.8962193;13.1238216
+SBG;35049;Raiffeisenbank Radstadt-Untertauern-Filzmoos-Forstau registrierte Genossenschaft mit beschränkter Haftung;Stadtplatz 6/7;5550;Radstadt;70832s;;(47.385034, 13.46306);47.385034;13.46306
+SBG;35051;Raiffeisenbank Rauris-Bucheben registrierte Genossenschaft mit beschränkter Haftung;Marktstraße 32;5661;Rauris;70163g;;(47.2293402, 12.9940882);47.2293402;12.9940882
+SBG;35052;Raiffeisenbank Saalbach-Hinterglemm-Viehhofen eGen;Dorfplatz 311;5753;Saalbach;68022h;;(47.3914964, 12.6362009);47.3914964;12.6362009
+SBG;35053;Raiffeisenbank Pinzgau Mitte eGen;Lofererstraße 5;5760;Saalfelden am Stein. Meer;71242v;;(47.4264842, 12.8486741);47.4264842;12.8486741
+SBG;35054;Raiffeisenbank Salzburg Liefering-Maxglan-Siezenheim eGen ;Innsbrucker Bundesstraße 34;5020;Salzburg;69083v;;(47.8053329, 13.0208798);47.8053329;13.0208798
+SBG;35055;Raiffeisenbank St. Veit-Schwarzach-Goldegg registrierte Genossenschaft mit beschränkter Haftung;Salzburger Straße 23;5620;Schwarzach im Pongau;37924x;;(47.3201421, 13.1587401);47.3201421;13.1587401
+SBG;35056;Raiffeisenbank St.Gilgen-Fuschl-Strobl eGen;Mozartplatz 4, Postfach 60;5340;St. Gilgen;70850t;;(47.7668851, 13.3639358);47.7668851;13.3639358
+SBG;35060;Raiffeisenbank St. Martin-Lofer-Weißbach eGen;St. Martin 7;5092;St. Martin;68225g;;(-34.7942698, 138.688414);-34.7942698;138.688414
+SBG;35062;Raiffeisenbank Straßwalchen eGen;Salzburgerstraße 3;5204;Straßwalchen;67421z;;(47.9786131, 13.254299);47.9786131;13.254299
+SBG;35063;Raiffeisenbank Lungau eGen;Kirchengasse 9, Postfach 9;5580;Tamsweg;53369i;;(47.1270747, 13.8101599);47.1270747;13.8101599
+SBG;35064;Raiffeisenbank Taxenbach registrierte Genossenschaft mit beschränkter Haftung;Raiffeisenstraße 1;5660;Taxenbach;70746p;;(47.2923909, 12.9634875);47.2923909;12.9634875
+SBG;35065;Raiffeisenbank Thalgau eGen;Marktplatz 1;5303;Thalgau;71262y;;(47.8415506, 13.254019);47.8415506;13.254019
+SBG;35066;Raiffeisenbank Unken eGen;Niederland 103;5091;Unken;67417v;;(47.6503132, 12.7291014);47.6503132;12.7291014
+SBG;35069;Raiffeisenbank St. Johann-Wagrain-Kleinarl eGen;Ing. Ludwig Pech-Straße 1;5600; St. Johann im Pongau;71082h;;(47.349322, 13.20236);47.349322;13.20236
+SBG;35071;Raiffeisenbank Wals-Himmelreich registrierte Genossenschaft mit beschränkter Haftung;Hauptstraße 13, Postfach 5;5071;Wals;69326a;;(47.790398, 12.9691821);47.790398;12.9691821
+SBG;35072;Raiffeisenkasse Werfen registrierte Genossenschaft mit beschränkter Haftung;Markt 25, Postfach 39;5450;Werfen;70782t;;(47.4769949, 13.1892002);47.4769949;13.1892002
+Tirol;36000;Raiffeisen-Landesbank Tirol AG;Adamgasse 1-7, Postfach 543;6021;Innsbruck;223624i;;(47.263814, 11.3982202);47.263814;11.3982202
+Tirol;36200;Raiffeisenbank Absam eGen;Salzbergstraße 64;6067;Absam;41064p;;(47.3012929, 11.5167984);47.3012929;11.5167984
+Tirol;36203;Raiffeisenbank Alpbachtal eGen;Alpbach 177;6236;Alpbach;40687i;;(47.3989444, 11.9432051);47.3989444;11.9432051
+Tirol;36207;Raiffeisenbank Arzl im Pitztal und Imsterberg registrierte Genossenschaft mit beschränkter Haftung;Dorfstraße 38;6471;Arzl im Pitztal;40575w;;(47.2077383, 10.7612595);47.2077383;10.7612595
+Tirol;36209;Raiffeisenbank Westliches Mittelgebirge eGen;Sylvester-Jordan-Straße 5;6094;Axams;41787b;;(47.2313492, 11.279308);47.2313492;11.279308
+Tirol;36215;Raiffeisenbank Brixen im Thale eGen;Dorfstraße 92;6364;Brixen im Thale;40489v;;(47.4500215, 12.2499472);47.4500215;12.2499472
+Tirol;36218;Raiffeisen Regionalbank Achensee eGen;Dorfstraße 38;6212;Maurach;39846y;;(47.423477, 11.7483749);47.423477;11.7483749
+Tirol;36219;Raiffeisenbank Ehrwald-Lermoos-Biberwier eGen;Kirchplatz 31;6632;Ehrwald;40662y;;(47.3985028, 10.9205521);47.3985028;10.9205521
+Tirol;36220;Raiffeisenbank Oberlechtal eGen;Elbigenalp 52;6652;Elbigenalp;41926g;;(47.28716049, 10.44171799);47.28716049;10.44171799
+Tirol;36223;Raiffeisenbank Erl eGen;Dorf 44;6343;Erl;40939f;;(47.6820351, 12.1802542);47.6820351;12.1802542
+Tirol;36229;Raiffeisen Regionalbank Fügen-Kaltenbach-Zell eGen;Franziskusweg 10;6263;Fügen;39730b;;(47.3421773, 11.8502114);47.3421773;11.8502114
+Tirol;36230;Raiffeisenbank Fulpmes-Telfes im Stubai eGen;Kirchstraße 3;6166;Fulpmes;38953i;;(47.1531751, 11.3497137);47.1531751;11.3497137
+Tirol;36232;RaiffeisenBank Going eGen;Dorfstraße 25;6353;Going am Wilden Kaiser;40576x;;(47.5147361, 12.329698);47.5147361;12.329698
+Tirol;36240;Raiffeisenkasse Hart eGen;Harterstraße 2;6265;Hart im Zillertal;39158k;;(47.3462643, 11.8642242);47.3462643;11.8642242
+Tirol;36241;Raiffeisenbank Hippach und Umgebung eGen;Lindenstraße 11;6283;Hippach;40801b;;(47.2037929, 11.8660456);47.2037929;11.8660456
+Tirol;36245;Raiffeisenbank Hopfgarten im Brixental eGen;Brixentaler Straße 15;6361;Hopfgarten;39375f;;(47.4489766, 12.1578926);47.4489766;12.1578926
+Tirol;36248;Raiffeisenbank Paznaun eGen;Dorfstraße 49;6561;Ischgl;41386m;;(47.0125944, 10.2911325);47.0125944;10.2911325
+Tirol;36252;Raiffeisenbank St. Anton am Arlberg eGen;Dorfstraße 24;6580;St. Anton am Arlberg;40929s;;(47.1283455, 10.2655297);47.1283455;10.2655297
+Tirol;36260;Raiffeisenbank Kematen eGen;Sandbichlweg 2;6175;Kematen in Tirol;41551f;;(47.2564454, 11.2739164);47.2564454;11.2739164
+Tirol;36262;Raiffeisenbank Kirchdorf Tirol registrierte Genossenschaft mit beschränkter Haftung;Dorfplatz 15;6382;Kirchdorf in Tirol;42586b;;(47.5576592, 12.4476854);47.5576592;12.4476854
+Tirol;36263;Raiffeisenbank Kitzbühel - St. Johann eGen;Achenweg 16;6370;Kitzbühel;39656v;;(47.4709933, 12.3448661);47.4709933;12.3448661
+Tirol;36264;Raiffeisenbank Kössen-Schwendt eGen;Dorf 4;6345;Kössen;39849b;;(47.6690554, 12.4049052);47.6690554;12.4049052
+Tirol;36267;Raiffeisenbank Kundl eGen;Dorfstraße 14;6250;Kundl;39098y;;(47.4684565, 11.9845004);47.4684565;11.9845004
+Tirol;36268;Raiffeisenbank Längenfeld eGen;Oberlängenfeld 72;6444;Längenfeld;41435i;;(47.0702561, 10.9704214);47.0702561;10.9704214
+Tirol;36269;Raiffeisenbank Langkampfen eGen;Untere Dorfstraße 2;6336;Langkampfen;40149v;;(47.5489352, 12.1009347);47.5489352;12.1009347
+Tirol;36272;Raiffeisenbank Buch, Gallzein und Strass registrierte Genossenschaft mit beschränkter Haftung;Buch 108a;6220;Buch in Tirol;40161k;;(47.391485, 11.772029);47.391485;11.772029
+Tirol;36273;Raiffeisenbank Matrei am Brenner und Umgebung eGen;Raiffeisenplatz 43a;6143;Matrei am Brenner;39856m;;(47.131493, 11.452879);47.131493;11.452879
+Tirol;36274;Raiffeisenbank Mayrhofen und Umgebung eGen;Hauptstraße 401;6290;Mayrhofen;40020d;;(47.1652789, 11.8623863);47.1652789;11.8623863
+Tirol;36279;Raiffeisenbank Münster eGen;Dorf 340;6232;Münster;41504k;;(47.4210544, 11.8328992);47.4210544;11.8328992
+Tirol;36281;Raiffeisenkasse für Mutters, Natters und Kreith registrierte Genossenschaft mit beschränkter Haftung;Kirchplatz 10;6162;Mutters;39580g;;(47.2272588, 11.37723);47.2272588;11.37723
+Tirol;36283;Raiffeisenbank Nauders eGen;Doktor Tschiggfrey-Straße 66;6543;Nauders;41558s;;(46.8914053, 10.5016513);46.8914053;10.5016513
+Tirol;36285;Raiffeisenbank Neustift-Mieders-Schönberg im Stubaital eGen;Dorf 2;6167;Neustift im Stubaital;41635d;;(47.1107184, 11.3078627);47.1107184;11.3078627
+Tirol;36291;Raiffeisenbank Vorderes Ötztal eGen;Hauptstraße 64;6433;Oetz;38777a;;(47.2034729, 10.8968118);47.2034729;10.8968118
+Tirol;36310;Raiffeisenkasse Rum-Innsbruck/Arzl eGen;Dörferstraße 10 a;6063;Rum;40068z;;(47.287074, 11.4568655);47.287074;11.4568655
+Tirol;36314;Raiffeisenbank Seefeld-Leutasch-Reith-Scharnitz registrierte Genossenschaft mit beschränkter Haftung;Münchner Straße 38;6100;Seefeld in Tirol;39152b;;(47.3296426, 11.1875861);47.3296426;11.1875861
+Tirol;36315;Raiffeisenbank Serfaus-Fiss-Ried eGen;Dorfbahnstraße 41-43;6534;Serfaus;40256a;;(47.0385989, 10.6050805);47.0385989;10.6050805
+Tirol;36316;Raiffeisenbank Silz-Haiming und Umgebung eGen;Tirolerstraße 78;6424;Silz;39616i;;(47.2660584, 10.9282956);47.2660584;10.9282956
+Tirol;36318;Raiffeisenbank Söll - Scheffau registrierte Genossenschaft mit beschränkter Haftung;Dorf 125;6306;Söll;39138g;;(47.503381, 12.1916129);47.503381;12.1916129
+Tirol;36320;Raiffeisenkasse Schlitters, Bruck und Straß registrierte Genossenschaft mit beschränkter Haftung;Schlitters 52;6262;Schlitters;41381f;;(47.37135202, 11.8248269);47.37135202;11.8248269
+Tirol;36322;Raiffeisen Regionalbank Schwaz eGen;Innsbrucker Straße 11, Postfach 106;6130;Schwaz;38860y;;(47.3440648, 11.7079954);47.3440648;11.7079954
+Tirol;36324;Raiffeisenbank Sölden eGen;Dorfstraße 88;6450;Sölden;39085d;;(46.9682031, 11.007548);46.9682031;11.007548
+Tirol;36329;Raiffeisenbank Wipptal eGen;Brennerstraße 52;6150;Steinach;41497a;;(47.0910333, 11.4664976);47.0910333;11.4664976
+Tirol;36332;Raiffeisenkasse Stumm, Stummerberg und Umgebung registrierte Genossenschaft mit beschränkter Haftung;Dorfstraße 17;6275;Stumm;39041p;;(47.2935315, 11.8848328);47.2935315;11.8848328
+Tirol;36333;Raiffeisenbank Tannheimertal eGen;Höf 35;6675;Tannheim;40045s;;(47.4992955, 10.5158665);47.4992955;10.5158665
+Tirol;36336;Raiffeisenbank Telfs-Mieming eGen;Untermarkt 3, Postfach 27;6410;Telfs;38171i;;(47.442527, 11.262314);47.442527;11.262314
+Tirol;36337;Raiffeisenbank Thaur eGen;Schulgasse 14;6065;Thaur;38840v;;(47.2920624, 11.4740309);47.2920624;11.4740309
+Tirol;36339;Raiffeisenbank Thiersee eGen;Vorderthiersee 40;6335;Thiersee;39412i;;(47.5941678, 12.1175506);47.5941678;12.1175506
+Tirol;36342;Raiffeisenbank Tux eGen;Lanersbach 464;6293;Tux;39646d;;(47.1550552, 11.7258346);47.1550552;11.7258346
+Tirol;36347;Raiffeisenkasse Volders und Umgebung registrierte Genossenschaft mit beschränkter Haftung;Bundesstraße 24 c;6111;Volders;39407b;;(47.287911, 11.5667025);47.287911;11.5667025
+Tirol;36349;RaiffeisenBank St. Ulrich - Waidring eGen;Dorfstraße 5 a;6384;Waidring;39911v;;(47.5844771, 12.5693843);47.5844771;12.5693843
+Tirol;36351;Raiffeisenbank Wattens und Umgebung, registrierte Genossenschaft mit beschränkter Haftung;Franz Strickner-Straße 2;6112;Wattens;39215w;;(47.2917824, 11.5925396);47.2917824;11.5925396
+Tirol;36352;Raiffeisenkasse Weerberg registrierte Genossenschaft mit beschränkter Haftung;Mitterberg 127;6133;Weerberg;39885f;;(47.2968877, 11.6643115);47.2968877;11.6643115
+Tirol;36353;Raiffeisenbank Pitztal eGen;Unterdorf 18;6473;Wenns;39863y;;(47.170812, 10.7312909);47.170812;10.7312909
+Tirol;36354;Raiffeisenbank Westendorf eGen;Dorfstraße 18;6363;Westendorf;40009m;;(47.4331205, 12.2161073);47.4331205;12.2161073
+Tirol;36357;Raiffeisenbank Wildschönau eGen;Kirchen, Oberau 314;6311;Wildschönau;41990a;;(47.4434599, 12.0483455);47.4434599;12.0483455
+Tirol;36358;Raiffeisen Bezirksbank Kufstein eGen;Oberer Stadtplatz 1a;6330;Kufstein;38648k;;(47.58345, 12.17079);47.58345;12.17079
+Tirol;36359;Raiffeisenbank Oberland eGen;Hauptstraße 55;6511;Zams;40224d;;(47.1585083, 10.588908);47.1585083;10.588908
+Tirol;36362;Raiffeisen Regionalbank Hall in Tirol eGen;Zollstraße 1, Postfach 64;6060;Hall in Tirol;41436k;;(47.2823286, 11.5127822);47.2823286;11.5127822
+Tirol;36368;Raiffeisenbank Sillian eGen;Marktplatz 10, Postfach 9;9920;Sillian;41360z;;(46.747747, 12.418051);46.747747;12.418051
+Tirol;36373;Raiffeisenkasse Lienzer Talboden eGen;Nikolsdorf 17;9782;Nikolsdorf;41782w;;(46.7854059, 12.9057615);46.7854059;12.9057615
+Tirol;36378;Raiffeisen Regionalbank Matrei i.O. eGen;Rauterplatz 4;9971;Matrei in Osttirol;41564z;;(47.0012468, 12.5389564);47.0012468;12.5389564
+Tirol;36386;Raiffeisenkasse Villgratental registrierte Genossenschaft mit beschränkter Haftung;Innervillgraten 79;9932;Innervillgraten;41041f;;(46.8099399, 12.373716);46.8099399;12.373716
+Tirol;36990;Raiffeisenbank Reutte registrierte Genossenschaft mit beschränkter Haftung;Untermarkt 3, Postfach 76;6600;Reutte;41584d;;(47.4893167, 10.7178171);47.4893167;10.7178171
+VLBG;37000;Raiffeisenlandesbank Vorarlberg Waren- und Revisionsverband registrierte Genossenschaft mit beschränkter Haftung;Rheinstraße 11;6900;Bregenz;63128k;;(47.4976837, 9.7327696);47.4976837;9.7327696
+VLBG;37401;Raiffeisenbank Alberschwende eGen;Hof 18;6861;Alberschwende;63097s;;(47.45020424, 9.83479942);47.45020424;9.83479942
+VLBG;37405;Raiffeisenbank Au eGen;Lisse 94;6883;Au/Bregenzerw.;63190b;;(47.3220478, 9.9788049);47.3220478;9.9788049
+VLBG;37406;Raiffeisenbank Bezau-Mellau-Bizau registrierte Genossenschaft mit beschränkter Haftung;Platz 398;6870;Bezau;59081i;;(47.3837426, 9.9010038);47.3837426;9.9010038
+VLBG;37420;Raiffeisenbank Im Rheintal eGen;Rathausplatz 8;6850;Dornbirn;63205z;;(47.4135542, 9.7444199);47.4135542;9.7444199
+VLBG;37422;Raiffeisenbank Montfort eGen;Domplatz 3;6800;Feldkirch;59672d;;(47.2380519, 9.5977273);47.2380519;9.5977273
+VLBG;37423;Raiffeisenbank Mittelbregenzerwald eGen;Loco 12;6863;Egg/Vbg.;63339x;;(47.43201822, 9.8970666);47.43201822;9.8970666
+VLBG;37431;Raiffeisenbank Bodensee-Leiblachtal eGen;Seestraße 1;6971;Hard;63256z;;(47.4883062, 9.688337);47.4883062;9.688337
+VLBG;37435;Raiffeisenbank Vorderbregenzerwald eGen;Platz 186;6952;Hittisau;59207w;;(47.4574672, 9.9603105);47.4574672;9.9603105
+VLBG;37438;Raiffeisenbank Hohenems registrierte Genossenschaft mit beschränkter Haftung;Schillerallee 1;6845;Hohenems;63123d;;(47.3630499, 9.6880891);47.3630499;9.6880891
+VLBG;37449;Raiffeisenbank Lech am Arlberg eGen ;Lech 90;6764;Lech;59694k;;(47.210824, 10.142199);47.210824;10.142199
+VLBG;37458;Raiffeisenbank im Walgau eGen;Bahnhofstraße 2;6710;Nenzing;63107f;;(47.1843582, 9.7058867);47.1843582;9.7058867
+VLBG;37468;Raiffeisenbank Bludenz-Montafon eGen;Werdenbergerstraße 9;6700;Bludenz;59048k;;(47.1551045, 9.8213585);47.1551045;9.8213585
+VLBG;37474;Raiffeisenbank Weissachtal eGen;Dorf 245;6934;Sulzberg;59220p;;(47.521852, 9.9138955);47.521852;9.9138955
+VLBG;37475;Raiffeisenbank Vorderland registrierte Genossenschaft mit beschränkter Haftung;Monfortstraße 9;6832;Sulz;63303v;;(47.29058838, 9.6558485);47.29058838;9.6558485
+VLBG;37482;Raiffeisenbank am Hofsteig registrierte Genossenschaft mit beschränkter Haftung;Kellhofstraße 12;6922;Wolfurt;58994g;;(47.4738364, 9.7506755);47.4738364;9.7506755
+STMK;38000;Raiffeisen-Landesbank Steiermark AG;Kaiserfeldgasse 5;8010;Graz;264700s;;(47.0681049, 15.4409075);47.0681049;15.4409075
+STMK;38001;Raiffeisenbank Admont eGen;Hauptstraße 33;8911;Admont;83066g;;(47.5767011, 14.4604929);47.5767011;14.4604929
+STMK;38023;Raiffeisenbank Oststeiermark Nord eGen;Raiffeisenplatz 200;8225;Pöllau bei Hartberg;53624i;;(47.3048526, 15.8388565);47.3048526;15.8388565
+STMK;38043;Raiffeisenbank Schilcherland eGen;Raiffeisenstraße 1;8530;Deutschlandsberg;59660k;;(46.819079, 15.2262196);46.819079;15.2262196
+STMK;38056;Raiffeisenbank Süd-Weststeiermark eGen;Oberer Markt 9;8551;Wies;59179d;;(46.7180385, 15.2698884);46.7180385;15.2698884
+STMK;38071;Raiffeisenbank Region Fehring eGen;Taborstraße 1;8350;Fehring;53892d;;(46.9365375, 16.0110896);46.9365375;16.0110896
+STMK;38075;Raiffeisenbank Mittleres Raabtal eGen;Paldau 40;8341;Paldau;67767h;;(46.941126, 15.7977443);46.941126;15.7977443
+STMK;38077;Raiffeisenbank Region Fürstenfeld eGen ;Stadt-Zug-Platz 4;8280;Fürstenfeld;59121v;;(47.0473534, 16.0807409);47.0473534;16.0807409
+STMK;38094;Raiffeisenbank Gamlitz eGen;Obere Hauptstraße 210;8462;Gamlitz;67407d;;(46.7205883, 15.55123);46.7205883;15.55123
+STMK;38102;Raiffeisenbank Gleinstätten-Leutschach-Groß St. Florian eGen;Gleinstätten 168;8443;Gleinstätten;69583d;;(46.7537708, 15.3638872);46.7537708;15.3638872
+STMK;38103;Raiffeisenbank Region Gleisdorf eGen;Florianiplatz 18/19;8200;Gleisdorf;59013i;;(47.1048809, 15.7112471);47.1048809;15.7112471
+STMK;38111;Raiffeisenbank Gratkorn eGen;Grazer Straße 5;8101;Gratkorn;47006b;;(47.132011, 15.3402501);47.132011;15.3402501
+STMK;38113;Raiffeisenbank Schladming-Gröbming eGen;Hauptstraße 279;8962;Gröbming;82869t;;(47.4466424, 13.9012515);47.4466424;13.9012515
+STMK;38128;Raiffeisenbank Halbenrain-Tieschen eGen;Halbenrain 125;8492;Halbenrain;53976b;;(46.7216811, 15.9462639);46.7216811;15.9462639
+STMK;38129;Raiffeisenbank Mariazellerland eGen;Hauptplatz 1;8630;Mariazell;82851s;;(47.7734734, 15.3172277);47.7734734;15.3172277
+STMK;38133;Raiffeisenbank Hausmannstätten eGen;Grazer Straße 6;8071;Hausmannst.;66741z;;(46.9924551, 15.5070953);46.9924551;15.5070953
+STMK;38138;Raiffeisenbank Gratwein-Hitzendorf eGen;Bahnhofstraße 22;8112;Gratwein-Straßengel;67290g;;(47.1296724, 15.3206425);47.1296724;15.3206425
+STMK;38151;Raiffeisenbank Ilz-Großsteinbach-Riegersburg eGen;Hauptstraße 39;8262;Ilz;67661b;;(47.0866285, 15.923977);47.0866285;15.923977
+STMK;38170;Raiffeisenbank Heiligenkreuz-Kirchbach -St. Georgen eGen;Kirchbach 12;8082;Kirchbach/Stmk.;69259b;;(48.5385111, 15.05254);48.5385111;15.05254
+STMK;38186;Raiffeisenbank Mürztal eGen;Grazer Straße 1;8670;Krieglach;83565s;;(47.5446786, 15.5615125);47.5446786;15.5615125
+STMK;38187;Raiffeisenbank Weiz-Anger eGen;Kapruner Generator Straße 10;8160;Weiz;46724m;;(47.2184369, 15.6283219);47.2184369;15.6283219
+STMK;38206;Raiffeisenbank Leibnitz eGen;Bahnhofstraße 2;8430;Leibnitz;48876b;;(46.7819529, 15.5413411);46.7819529;15.5413411
+STMK;38210;Raiffeisenbank Lieboch-Stainz eGen;Grazer Straße 7;8510;Stainz;52533f;;(46.8947476, 15.264606);46.8947476;15.264606
+STMK;38215;Raiffeisenbank Liezen-Rottenmann-Trieben eGen;Hauptplatz 11;8940;Liezen;85758s;;(47.5668525, 14.2410873);47.5668525;14.2410873
+STMK;38227;Raiffeisenbank Liesingtal-St. Stefan eGen ;Hauptstraße 18;8774;Mautern/Stmk.;83488b;;(47.3996626, 14.8264034);47.3996626;14.8264034
+STMK;38238;Raiffeisenbank Murau eGen;Bundesstraße 5;8850;Murau;85650g;;(47.1118747, 14.1803918);47.1118747;14.1803918
+STMK;38249;Raiffeisenbank Steirisches Salzkammergut-Öblarn eGen;Bad Mitterndorf 13a;8983;Bad Mitterndorf;55977w;;(47.5547456, 13.9321851);47.5547456;13.9321851
+STMK;38252;Raiffeisenbank Nestelbach-Eggersdorf eGen;Schemerlhöhe 71;8302;Nestelbach;38241m;;(47.0578106, 15.6000212);47.0578106;15.6000212
+STMK;38282;Raiffeisenbank Passail eGen;Markt 15;8162;Passail;69221x;;(47.28220708, 15.5144729);47.28220708;15.5144729
+STMK;38285;Raiffeisenbank Pischelsdorf-Stubenberg eGen;Hauptplatz 26;8212;Pischelsdf/Stmk;67618p;;(48.3049761, 14.2874385);48.3049761;14.2874385
+STMK;38312;Raiffeisenbank Bad Radkersburg-Klöch eGen;Halbenrainer Straße 2;8490;Bad Radkersburg;60353f;;(46.6916225, 15.9874038);46.6916225;15.9874038
+STMK;38346;Raiffeisenbank Aichfeld eGen;Kärntner Straße 2;8720;Knittelfeld;56745z;;(47.2146729, 14.8257129);47.2146729;14.8257129
+STMK;38347;Raiffeisenbank Turnau-St. Lorenzen eGen;Hauptstraße 21;8641;St. Marein im Mürztal;79781a;;(47.4745449, 15.3710981);47.4745449;15.3710981
+STMK;38367;Raiffeisenbank Graz-St. Peter eGen;St.Peter-Hauptstraße 55;8042;Graz-St.Peter;59147g;;(47.0572574, 15.4718512);47.0572574;15.4718512
+STMK;38368;Raiffeisenbank Zirbenland eGen;Hauptplatz 12;8750;Judenburg;77960y;;(47.168466, 14.6613892);47.168466;14.6613892
+STMK;38370;Raiffeisenbank Mureck eGen;Hauptplatz 8;8480;Mureck;54019s;;(46.7071276, 15.7724386);46.7071276;15.7724386
+STMK;38374;Raiffeisenbank St. Stefan-Jagerberg-Wolfsberg eGen;Murecker Straße 23;8083;St.Stefan i.R.;57965v;;(46.9025621, 15.712006);46.9025621;15.712006
+STMK;38377;Raiffeisenbank Region Graz Nord eGen;Grazer Straße 62;8045;Graz-Andritz;67302z;;(47.1030746, 15.4213349);47.1030746;15.4213349
+STMK;38402;Raiffeisenbank Neumarkt-Oberwölz eGen;Hauptplatz 47;8820;Neumarkt/Stmk.;53595t;;(47.0720369, 14.4261349);47.0720369;14.4261349
+STMK;38403;Raiffeisenbank Region Hartberg eGen;Wiesengasse 2;8230;Hartberg;56549k;;(47.2811205, 15.9732933);47.2811205;15.9732933
+STMK;38420;Raiffeisenbank Straß-Spielfeld eGen;Hauptstraße 59;8472;Straß/Stmk.;66776a;;(46.7278707, 15.6229146);46.7278707;15.6229146
+STMK;38433;Raiffeisenbank Stallhofen eGen;Raiffeisenplatz 1;8152;Stallhofen;67603t;;(47.049445, 15.2200782);47.049445;15.2200782
+STMK;38436;Raiffeisenbank Straden eGen;Raiffeisengasse 75;8345;Straden;56655t;;(46.808083, 15.869461);46.808083;15.869461
+STMK;38439;Raiffeisenbank Graz-Straßgang eGen;Kärntner Straße 394;8054;Graz/Straßgang;53593p;;(47.0245949, 15.4001028);47.0245949;15.4001028
+STMK;38460;Raiffeisenbank Leoben-Bruck eGen;Grazer Straße 63;8605;Kapfenberg;73487w;;(47.4332207, 15.2721147);47.4332207;15.2721147
+STMK;38477;Raiffeisenbank Region Graz-Thalerhof eGen;Hauptstraße 135;8401;Kalsdorf/Graz;68209h;;(46.9624212, 15.4794421);46.9624212;15.4794421
+STMK;38487;Raiffeisenbank Lipizzanerheimat eGen;Conrad v. Hötzendorf-Straße 5;8570;Voitsberg;47019x;;(47.0501756, 15.1466261);47.0501756;15.1466261
+STMK;38497;Raiffeisenbank Region Feldbach eGen;Hauptplatz 18;8330;Feldbach;66811b;;(46.952764, 15.8874743);46.952764;15.8874743
+STMK;38499;Raiffeisenbank Wildon-Preding eGen;Leibnitzer Straße 1;8410;Wildon;53999k;;(46.8844348, 15.5194841);46.8844348;15.5194841
+KTN;39000;Raiffeisenlandesbank Kärnten - Rechenzentrum und Revisionsverband, registrierte Genossenschaft mit beschränkter Haftung;Raiffeisenplatz 1;9020;Klagenfurt;116094b;;(46.606345, 14.305652);46.606345;14.305652
+KTN;39255;Raiffeisenbank Althofen - Guttaring, registrierte Genossenschaft mit beschränkter Haftung;Kreuzstraße 15, Postfach 14;9330;Treibach-Althofen;115003y;;(46.8706486, 14.4689249);46.8706486;14.4689249
+KTN;39257;Raiffeisenbank Arnoldstein-Fürnitz eG;Gemeindeplatz 2;9601;Arnoldstein;110960b;;(46.5495021, 13.7102784);46.5495021;13.7102784
+KTN;39267;Raiffeisen-Bezirksbank Spittal/Drau, registrierte Genossenschaft mit beschränkter Haftung;Burgplatz 2, Postfach 62;9802;Spittal an der Drau;110971v;;(51.337297, 12.37297);51.337297;12.37297
+KTN;39271;Raiffeisenbank Brückl-Eberstein-Klein St. Paul-Waisenberg, registrierte Genossenschaft mit beschränkter Haftung;Hüttenbergerstraße 1, Postfach 9;9371;Brückl;111132f;;(50.529486, 8.646903);50.529486;8.646903
+KTN;39272;Raiffeisenbank Bleiburg registrierte Genossenschaft mit beschränkter Haftung;10. Oktoberplatz 13;9150;Bleiburg;116173v;;(46.76554425, 14.3554511);46.76554425;14.3554511
+KTN;39288;Raiffeisenbank Eberndorf registrierte Genossenschaft mit beschränkter Haftung;Bahnstraße 22;9141;Eberndorf;118747d;;(46.5889502, 14.6366224);46.5889502;14.6366224
+KTN;39292;Raiffeisenbank Lavamünd, registrierte Genossenschaft mit beschränkter Haftung;Lavamünd 41;9473;Lavamünd;113148w;;(46.6424499, 14.9406092);46.6424499;14.9406092
+KTN;39320;Raiffeisenbank Grafenstein-Magdalensberg und Umgebung, registrierte Genossenschaft mit beschränkter Haftung;Klopeiner Straße 3;9131;Grafenstein;111194x;;(46.6176252, 14.4658699);46.6176252;14.4658699
+KTN;39322;Raiffeisenbank Oberdrautal-Weissensee, registrierte Genossenschaft mit beschränkter Haftung;Greifenburg 120, Postfach 39;9761;Greifenburg;111198b;;(46.7507992, 13.1805742);46.7507992;13.1805742
+KTN;39340;Raiffeisenbank Hüttenberg - Wieting, registrierte Genossenschaft mit beschränkter Haftung;Reiftanzplatz 7, Postfach 1;9375;Hüttenberg;114658s;;(46.939746, 14.5485712);46.939746;14.5485712
+KTN;39364;Raiffeisenbank Kötschach - Mauthen, registrierte Genossenschaft mit beschränkter Haftung;Kötschach 7;9640;Kötschach;114659t;;(46.6768431, 13.0034785);46.6768431;13.0034785
+KTN;39381;Raiffeisenbank Landskron - Gegendtal, registrierte Genossenschaft mit beschränkter Haftung;Ossiacherstraße 26, Postfach 11;9523;Landskron;113036f;;(46.6343744, 13.8831531);46.6343744;13.8831531
+KTN;39384;Raiffeisen Regionalbank Längsee-Hochosterwitz eGen;Hauptstraße 12;9314;Launsdorf;111143x;;(46.768165, 14.4559067);46.768165;14.4559067
+KTN;39390;Raiffeisenbank Region Wörthersee eG;Karawankenplatz 2;9220;Velden am Wörthersee;118767h;;(46.614187, 14.0412596);46.614187;14.0412596
+KTN;39411;Raiffeisenbank Moosburg-Tigring, registrierte Genossenschaft mit beschränkter Haftung;Klagenfurterstraße 5;9062;Moosburg;113054g;;(46.6582134, 14.1743699);46.6582134;14.1743699
+KTN;39412;Raiffeisen Bank Lurnfeld-Mölltal eGen;Hauptstraße 23;9813;Möllbrücke;113153b;;(46.8344658, 13.370386);46.8344658;13.370386
+KTN;39442;Raiffeisenbank Drautal registrierte Genossenschaft mit beschränkter Haftung;Villacher Straße 74;9710;Feistritz an der Drau;118739t;;(46.7017646, 13.6635407);46.7017646;13.6635407
+KTN;39457;Raiffeisenbank Nockberge eGen;Hauptstraße 41;9545;Radenthein;111072t;;(46.8005905, 13.7038756);46.8005905;13.7038756
+KTN;39464;Raiffeisenbank Lieser-Maltatal eG;Rennweg 6;9863;Rennweg ;113120d;;(47.0173035, 13.612727);47.0173035;13.612727
+KTN;39475;Raiffeisen-Bezirksbank St. Veit a.d. Glan-Feldkirchen, registrierte Genossenschaft mit beschränkter Haftung;Oktoberplatz 1, Postfach 9;9300;St. Veit an der Glan;110981h;;(46.7658066, 14.3561075);46.7658066;14.3561075
+KTN;39479;Raiffeisenbank Millstättersee eG;Hauptstraße 82, Postfach 7;9871;Seeboden;119553p;;(46.8183536, 13.5180955);46.8183536;13.5180955
+KTN;39481;Raiffeisenbank Mittleres Lavanttal eGen;St. Andrä 76;9433;St. Andrä im Lavanttal;112041t;;(46.766517, 14.82309);46.766517;14.82309
+KTN;39487;Raiffeisenbank Rosental, registrierte Genossenschaft mit beschränkter Haftung;Feistritz 126;9181;Feistritz im Rosental ;113139g;;(46.522788, 14.168826);46.522788;14.168826
+KTN;39491;Raiffeisenbank Oberes Lavanttal registrierte Genossenschaft mit beschränkter Haftung;Hauptplatz 18, Postfach 19;9462;Bad St. Leonhard im Lavanttal;113717g;;(46.9632423, 14.7927096);46.9632423;14.7927096
+KTN;39496;Raiffeisen Bank Villach registrierte Genossenschaft mit beschränkter Haftung;Nikolaigasse 4, Postfach 32;9500;Villach;119565g;;(46.6154828, 13.8491285);46.6154828;13.8491285
+KTN;39500;Raiffeisenbank St. Paul im Lavanttal mit Zweiganstalten Maria Rojach und St. Georgen, registrierte Genossenschaft mit beschränkter Haftung;Hauptstraße 26;9470;St. Paul im Lavanttal;110964h;;(46.7033911, 14.8690234);46.7033911;14.8690234
+KTN;39501;Raiffeisenbank Friesach-Metnitztal, registrierte Genossenschaft mit beschränkter Haftung;Hauptplatz 13;9360;Friesach;119487t;;(46.950811, 14.4048069);46.950811;14.4048069
+KTN;39510;Raiffeisenbank Ossiacher See, registrierte Genossenschaft mit beschränkter Haftung;10.-Oktober-Straße 2, Postfach 12;9551;Bodensdorf;119482i;;(46.6854192, 13.9741813);46.6854192;13.9741813
+KTN;39511;Raiffeisenbank Gurktal, registrierte Genossenschaft mit beschränkter Haftung;Hauptplatz 5;9341;Straßburg;113111s;;(47.836762, 15.840216);47.836762;15.840216
+KTN;39543;Raiffeisenbank Hermagor, registrierte Genossenschaft mit beschränkter Haftung;Gasserplatz 4;9620;Hermagor;112962x;;(46.6273904, 13.370763);46.6273904;13.370763
+KTN;39546;Raiffeisenbank Völkermarkt, registrierte Genossenschaft mit beschränkter Haftung;Hauptplatz 12, Postfach 8;9100;Völkermarkt;116028f;;(46.6590431, 14.6343007);46.6590431;14.6343007
+KTN;39559;Raiffeisenbank Wernberg, registrierte Genossenschaft mit beschränkter Haftung;Bundesstraße 15;9241;Wernberg;112912y;;(46.623164, 13.9394182);46.623164;13.9394182
+KTN;39561;Raiffeisenbank Oberes Mölltal-Oberdrauburg eGen;Winklern 37, Postfach 12;9841;Winklern;113124i;;(46.8704422, 12.8773382);46.8704422;12.8773382
+sonstige;54000;Oberösterreichische Landesbank Aktiengesellschaft (Hypo Oberösterreich);Landstraße 38;4010;Linz;157656y;xs2a access under domain hypo.at;(48.3012479, 14.2901072);48.3012479;14.2901072
