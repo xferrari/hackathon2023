@@ -13,7 +13,7 @@ A brief description of your project goes here. Explain what the project does, it
 - [Contributing](#contributing)
 - [License](#license)
 
-## Installation
+## Installation & Setup
 
 Provide instructions on how to install and set up your project. Include any dependencies and step-by-step installation
 guidelines.
@@ -21,6 +21,8 @@ guidelines.
 ```bash
 npm install       # Installs all necessary dependencies
 ```
+
+Create an API key at https://www.graphhopper.com/ - required to make API calls against the GraphHopper API.
 
 ## Usage
 
