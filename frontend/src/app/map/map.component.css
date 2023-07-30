@@ -11,7 +11,7 @@
 
 /* Set the menu container to take 250px width */
 .menu-container {
-  background-color: rgb(150, 255, 98);
+  background-color: rgb(223, 255, 206);
   width: 250px;
   border: 2px solid black;
   padding: 10px;
@@ -19,7 +19,7 @@
 }
 
 .map-container {
-  background-color: rgb(150, 255, 98);
+  background-color: rgb(223, 255, 206);
   flex: 1;
   border: 2px solid black;
   padding: 10px;
@@ -36,7 +36,7 @@
 
 /* Center the button horizontally in the menu and make it wider */
 button {
-  background-color: rgb(255, 204, 160);
+  background-color: rgb(223, 255, 206);
   color: black;
   width: 100%;
   margin-bottom: 10px;
@@ -44,11 +44,15 @@ button {
 
 /* Styles for the disabled button */
 button:disabled {
-  background-color: rgba(255, 204, 160, 0.5); /* Add some transparency to indicate it's disabled */
+  background-color: rgba(
+    223,
+    255,
+    206,
+    0.5
+  ); /* Add some transparency to indicate it's disabled */
   color: #999; /* Change the text color for better readability */
   cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
 }
-
 
 /* Optionally, add some space between the button and other elements in the menu */
 button:not(:last-child) {
@@ -63,11 +67,13 @@ button:not(:last-child) {
   background-color: #f0f0f0; /* Light gray background color */
 }
 
+.result-box.colorblind-mode {
+  background-color: #f0f0f0; /* Light gray background color */
+}
+
 button.colorblind-mode {
   background-color: #f0f0f0;
 }
-
-
 
 .entry-container {
   max-width: 600px;
@@ -80,7 +86,13 @@ button.colorblind-mode {
 }
 
 .result-box {
-  margin-top: auto;
+  /*margin-top: auto;*/ /* This will place the element at the bottom */
+  margin-left: 10px; /* This will add 10px space from the left */
+  margin-bottom: 10px;
+  background-color: rgb(223, 255, 206);
+  width: 250px;
+  border: 2px solid black;
+  padding: 10px;
 }
 
 /* CSS styles for the individual entry boxes */
@@ -95,4 +107,3 @@ button.colorblind-mode {
   font-size: 14px;
   margin: 10px 0;
 }
-

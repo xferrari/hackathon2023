@@ -10,8 +10,11 @@ import { Route } from '../model/route.model';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
-  public routes!: Route[]
-  public optimizedRoutes!: Route[]
+  private CO2_EMISSION_FACTOR = 2.31; // kg CO2 per liter
+  private FUEL_EFFICIENCY = 8; // L/100km
+
+  public routes!: Route[];
+  public optimizedRoutes!: Route[];
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
@@ -38,9 +41,7 @@ export class MapComponent implements OnInit {
 
   private initMap(): void {
     // Create the map
-    this.map = L.map(
-      this.elementRef.nativeElement.querySelector('#map')
-    );
+    this.map = L.map(this.elementRef.nativeElement.querySelector('#map'));
     // Add OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
@@ -67,6 +68,7 @@ export class MapComponent implements OnInit {
 
   addRouteBasedOnCoordinates(
     map: L.Map,
+    facilityNames: string[],
     targets: L.LatLng[],
     color: string
   ): void {
@@ -79,8 +81,22 @@ export class MapComponent implements OnInit {
         missingRouteTolerance: 0,
       },
       showAlternatives: false,
-      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
+      routeWhileDragging: false, // Enable real-time route updates while dragging waypoints
     }).addTo(map);
+
+    let index = 0;
+
+    while (index < targets.length) {
+      L.tooltip({
+        direction: 'center',
+        className: 'text',
+        interactive: true,
+      })
+        .setContent(facilityNames[index])
+        .setLatLng(targets[index])
+        .addTo(map);
+      index += 1;
+    }
   }
 
   onRouteButtonClick(): void {
@@ -99,6 +115,7 @@ export class MapComponent implements OnInit {
     this.initMap();
     if (this.routes.length > 0) {
       this.backendService.optimizeRoutes(this.routes).subscribe((response) => {
+        this.optimizedRoutes = response;
         this.handleResponse(response);
       });
     } else {
@@ -107,30 +124,39 @@ export class MapComponent implements OnInit {
 
   getCostSum(): number {
     if (this.routes == undefined || this.routes.length === 0) {
-      return 143;
+      return 0;
     }
     let kmSum = this.routes.reduce((sum, element) => sum + element.costs, 0);
-    return Math.round(kmSum/1000);
+    return Math.round(kmSum / 1000);
   }
 
   getOptimizedCostSum(): number {
-    if (this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
-      return 73;
+    if (
+      this.optimizedRoutes == undefined ||
+      this.optimizedRoutes.length === 0
+    ) {
+      return 0;
     }
 
-    let kmSum = this.optimizedRoutes.reduce((sum, element) => sum + element.costs, 0);
-    return Math.round(kmSum/1000);
+    let kmSum = this.optimizedRoutes.reduce(
+      (sum, element) => sum + element.costs,
+      0
+    );
+    return Math.round(kmSum / 1000);
   }
 
   handleResponse(response: Route[]): void {
     response.forEach((r) => {
+      const facilityNames: string[] = [];
       const targetList: L.LatLng[] = [];
       r.targets.forEach((target) => {
         targetList.push(new L.LatLng(target.latitude, target.longitude));
+        facilityNames.push(target.facilityName);
       });
 
       this.addRouteBasedOnCoordinates(
         this.map,
+        facilityNames,
         targetList,
         '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
       );
@@ -145,5 +171,24 @@ export class MapComponent implements OnInit {
     } else {
       document.documentElement.classList.remove('colorblind-mode');
     }
+  }
+
+  getCostDifference(): number {
+    let optimized = this.getOptimizedCostSum();
+    if (optimized === 0) {
+      return 0;
+    }
+
+    return this.getCostSum() - this.getOptimizedCostSum();
+  }
+
+  getCO2Emissions(): number {
+    if(this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
+      return 0;
+    }
+    const difference = this.getCostDifference();
+    const fuelConsumed = (difference / 100) * this.FUEL_EFFICIENCY; // Calculate fuel consumed in liters
+    const co2Emission = fuelConsumed * this.CO2_EMISSION_FACTOR; // Calculate CO2 emissions in kg
+    return Math.round(co2Emission);
   }
 }
