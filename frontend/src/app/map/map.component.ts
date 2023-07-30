@@ -10,6 +10,10 @@ import { Route } from '../model/route.model';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
+
+  private CO2_EMISSION_FACTOR = 2.31; // kg CO2 per liter
+  private FUEL_EFFICIENCY = 8; // L/100km
+  
   public routes!: Route[]
   public optimizedRoutes!: Route[]
   private map!: L.Map;
@@ -146,4 +150,16 @@ export class MapComponent implements OnInit {
       document.documentElement.classList.remove('colorblind-mode');
     }
   }
+
+  getCostDifference(): number {
+    return this.getCostSum() - this.getOptimizedCostSum();
+    }
+
+  getCO2Emissions(): number {
+    const difference = this.getCostDifference();
+    const fuelConsumed = (difference / 100) * this.FUEL_EFFICIENCY; // Calculate fuel consumed in liters
+    const co2Emission = fuelConsumed * this.CO2_EMISSION_FACTOR; // Calculate CO2 emissions in kg
+    return co2Emission;
+  }
+
 }

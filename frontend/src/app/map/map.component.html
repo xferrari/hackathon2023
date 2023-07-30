@@ -26,12 +26,14 @@
       {{element.costs}}
     </div>
     <div [class.colorblind-mode]="isColorblindModeActive" class="result-box">
-      <label [style.color]="'blue'">KM Before: {{getCostSum()}}</label>
+      <label [style.color]="'blue'">KM Before: {{ getCostSum() }}</label>
       <br>
-      <label [style.color]="'purple'">KM Optimized: {{getOptimizedCostSum()}}</label>
+      <label [style.color]="'purple'">KM Optimized: {{ getOptimizedCostSum() }}</label>
       <br>
-      <label [style.color]="'orange'" >KM Difference: {{getCostSum()-getOptimizedCostSum()}}</label>
-    </div>
+      <label [style.color]="'orange'">KM Difference: {{ getCostDifference() }}</label>
+      <br>
+      <label [style.color]="'green'">CO2 Emissions Saved: {{ getCO2Emissions() }}</label>
+    </div>    
   </div>
   <div [class.colorblind-mode]="isColorblindModeActive" class="map-container">
     <link
