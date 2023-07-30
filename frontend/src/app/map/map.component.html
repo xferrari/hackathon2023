@@ -25,10 +25,12 @@
     <div class="entry-container" *ngFor="let element of this.routes">
       {{element.costs}}
     </div>
-    <div class="result-box">
-      <label>Km before opt: {{getCostSum()}}</label>
+    <div [class.colorblind-mode]="isColorblindModeActive" class="result-box">
+      <label [style.color]="'blue'">KM Before: {{getCostSum()}}</label>
       <br>
-      <label>Km after opt: {{getOptimizedCostSum()}}</label>
+      <label [style.color]="'purple'">KM Optimized: {{getOptimizedCostSum()}}</label>
+      <br>
+      <label [style.color]="'orange'" >KM Difference: {{getCostSum()-getOptimizedCostSum()}}</label>
     </div>
   </div>
   <div [class.colorblind-mode]="isColorblindModeActive" class="map-container">
