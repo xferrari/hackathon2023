@@ -11,6 +11,11 @@ export class BackendService {
     return this.http.get<[Route]>(url);
   }
 
+  getRoutes2() {
+    let url = 'http://localhost:8080/api/initial2';
+    return this.http.get<[Route]>(url);
+  }
+
   optimizeRoutes(routes: Route[]) {
     let url = 'http://localhost:8080/api/mergeRoutes';
     console.log(routes);

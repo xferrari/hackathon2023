@@ -8,9 +8,16 @@
         <button
           [class.colorblind-mode]="isColorblindModeActive"
           color="primary"
+          (click)="onRoute2ButtonClick()"
+        >
+          Get Routes (Ex1)
+        </button>
+        <button
+          [class.colorblind-mode]="isColorblindModeActive"
+          color="primary"
           (click)="onRouteButtonClick()"
         >
-          Get Routes
+          Get Routes (Ex2)
         </button>
         <button
           [class.colorblind-mode]="isColorblindModeActive"
@@ -30,7 +37,9 @@
       </div>
     </div>
     <div [class.colorblind-mode]="isColorblindModeActive" class="result-box">
-      <label [style.color]="'blue'">Initial routes length: {{ getCostSum() }}km</label>
+      <label [style.color]="'blue'"
+        >Initial routes length: {{ getCostSum() }}km</label
+      >
       <br />
       <label [style.color]="'purple'"
         >Optimized routes length: {{ getOptimizedCostSum() }}km</label

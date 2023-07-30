@@ -100,11 +100,26 @@ export class MapComponent implements OnInit {
   }
 
   onRouteButtonClick(): void {
+    this.routes = [];
+    this.optimizedRoutes = [];
     //this.createRouting(startPoint, endPoint);
     this.map.remove();
     this.initMap();
 
     this.backendService.getRoutes().subscribe((response) => {
+      this.routes = response;
+      this.handleResponse(response);
+    });
+  }
+
+  onRoute2ButtonClick(): void {
+    this.routes = [];
+    this.optimizedRoutes = [];
+    //this.createRouting(startPoint, endPoint);
+    this.map.remove();
+    this.initMap();
+
+    this.backendService.getRoutes2().subscribe((response) => {
       this.routes = response;
       this.handleResponse(response);
     });
@@ -183,7 +198,10 @@ export class MapComponent implements OnInit {
   }
 
   getCO2Emissions(): number {
-    if(this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
+    if (
+      this.optimizedRoutes == undefined ||
+      this.optimizedRoutes.length === 0
+    ) {
       return 0;
     }
     const difference = this.getCostDifference();
