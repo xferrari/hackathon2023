@@ -8,7 +8,6 @@ import at.codingaustria.hackathon.obj.Location;
 import at.codingaustria.hackathon.obj.Route;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.graphhopper.directions.api.client.ApiException;
 import org.springframework.http.HttpStatus;
@@ -20,11 +19,6 @@ import java.util.List;
 
 @RestController
 public class RouteContoller {
-
-    @GetMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
 
     @GetMapping("/api/initial3")
     @ResponseBody
@@ -54,36 +48,56 @@ public class RouteContoller {
     @GetMapping("/api/initial")
     @ResponseBody
     public ResponseEntity<List<Route>> getInitData() throws RouteNotFoundException, ApiException {
-        List<Location> list1 = new ArrayList<>();
-        list1.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list1.add(new Location(48.527794, 16.3619866, "Raiffeisenkasse Ernstbrunn eGen"));
+        var list1 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.527794, 16.3619866, "Raiffeisenkasse  \nErnstbrunn eGen"));
         Route route1 = RouteEvaluator.getFullRouteInformation(list1);
 
-        List<Location> list2 = new ArrayList<>();
-        list2.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list2.add(new Location(48.0863213, 16.291321, "Raiffeisen Regionalbank Mödling eGen"));
+        var list2 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.0863213, 16.291321, "Raiffeisen Regionalbank \nMödling eGen"));
         Route route2 = RouteEvaluator.getFullRouteInformation(list2);
 
-        List<Location> list3 = new ArrayList<>();
-        list3.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list3.add(new Location(48.56526, 16.0799974, "Raiffeisen Regionalbank Mödling eGen"));
+        var list3 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.56526, 16.0799974, "Raiffeisenbank \nHollabrunn eGen"));
         Route route3 = RouteEvaluator.getFullRouteInformation(list3);
 
-        List<Location> list4 = new ArrayList<>();
-        list4.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list4.add(new Location(48.3738038, 16.3137991, "Raiffeisenbank Korneuburg eGen"));
+        var list4 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.3738038, 16.3137991, "Raiffeisenbank \nKorneuburg eGen"));
         Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
-        List<Location> list5 = new ArrayList<>();
-        list5.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list5.add(new Location(48.1464987, 16.7032167, "Raiffeisenkasse Orth a.d. Donau eGen"));
+        var list5 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.1464987, 16.7032167, "Raiffeisenkasse  \nOrth a.d. Donau eGen"));
         Route route5 = RouteEvaluator.getFullRouteInformation(list5);
 
-        List<Location> list6 = new ArrayList<>();
-        list6.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list6.add(new Location(48.1784607, 16.0761195, "Raiffeisenbank Wienerwald eGen"));
+        var list6 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.1784607, 16.0761195, "Raiffeisenbank \nWienerwald eGen"));
         Route route6 = RouteEvaluator.getFullRouteInformation(list6);
 
+        var list7 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.3772609, 16.3218755, "Raiffeisenbank \nKreuzenstein eGen"));
+        Route route7 = RouteEvaluator.getFullRouteInformation(list7);
+
+        var list8 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.383062, 16.51794, "Raiffeisenbank \nim Weinviertel eGen"),
+                new Location(48.6683946, 16.629288, "Raiffeisenkasse \nPoysdorf eGen"));
+        Route route8 = RouteEvaluator.getFullRouteInformation(list8);
+
+        var list9 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.1784607, 16.0761195, "Raiffeisenbank \nWienerwald eGen"));
+        Route route9 = RouteEvaluator.getFullRouteInformation(list9);
+
+        var list10 = List.of(
+                new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"),
+                new Location(48.1409306, 16.4789943, "Raiffeisenbank \nRegion Schwechat eGen"));
+        Route route10 = RouteEvaluator.getFullRouteInformation(list10);
 
         List<Route> listOfTheList = new ArrayList<>();
         listOfTheList.add(route1);
@@ -92,6 +106,10 @@ public class RouteContoller {
         listOfTheList.add(route4);
         listOfTheList.add(route5);
         listOfTheList.add(route6);
+        listOfTheList.add(route7);
+        listOfTheList.add(route8);
+        listOfTheList.add(route9);
+        listOfTheList.add(route10);
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
@@ -103,29 +121,29 @@ public class RouteContoller {
     @ResponseBody
     public ResponseEntity<List<Route>> getInitData2() throws RouteNotFoundException, ApiException {
         List<Location> list2 = new ArrayList<>();
-        list2.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank Region Wagram eGen"));
-        list2.add(new Location(48.3739927, 16.6357775, "Raiffeisenbank Auersthal-Bockfließ-Groß Schweinbarth eGen"));
-        list2.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank Region Amstetten eGen"));
+        list2.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank \nRegion Wagram eGen"));
+        list2.add(new Location(48.3739927, 16.6357775, "Raiffeisenbank \nAuersthal-Bockfließ-Groß Schweinbarth eGen"));
+        list2.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank \nRegion Amstetten eGen"));
         Route route2 = RouteEvaluator.getFullRouteInformation(list2);
 
         List<Location> list3 = new ArrayList<>();
-        list3.add(new Location(48.0053016, 16.231961, "Raiffeisenbank Region Baden eGen"));
-        list3.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank Region Wagram eGen"));
-        list3.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank Region Amstetten eGen"));
+        list3.add(new Location(48.0053016, 16.231961, "Raiffeisenbank \nRegion Baden eGen"));
+        list3.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank \nRegion Wagram eGen"));
+        list3.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank \nRegion Amstetten eGen"));
         Route route3 = RouteEvaluator.getFullRouteInformation(list3);
 
         List<Location> list1 = new ArrayList<>();
-        list1.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
-        list1.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank Region Wagram eGen"));
-        list1.add(new Location(48.3739927, 16.6357775, "Raiffeisenbank Auersthal-Bockfließ-Groß Schweinbarth eGen"));
-        list1.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank Region Amstetten eGen"));
+        list1.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK \nNIEDERÖSTERREICH-WIEN AG"));
+        list1.add(new Location(48.4017869, 15.9847379, "Raiffeisenbank \nRegion Wagram eGen"));
+        list1.add(new Location(48.3739927, 16.6357775, "Raiffeisenbank \nAuersthal-Bockfließ-Groß Schweinbarth eGen"));
+        list1.add(new Location(48.1245335, 14.8823511, "Raiffeisenbank \nRegion Amstetten eGen"));
         Route route1 = RouteEvaluator.getFullRouteInformation(list1);
 
         List<Location> list4 = new ArrayList<>();
-        list4.add(new Location(47.845516, 16.516668, "Raiffeisenlandesbank Burgenland und Revisionsverband eGen"));
-        list4.add(new Location(47.7766024, 17.0326694, "Raiffeisenbank Seewinkel-Hansag eGen"));
-        list4.add(new Location(47.6000949, 16.6252523, "Raiffeisenbank Region Deutschkreutz-Horitschon eGen"));
-        list4.add(new Location(47.8966677, 16.6438987, "Raiffeisenbank Neusiedlersee-HÃ¼gelland eGen"));
+        list4.add(new Location(47.845516, 16.516668, "RAIFFEISENLANDESBANK \nBurgenland und Revisionsverband eGen"));
+        list4.add(new Location(47.7766024, 17.0326694, "Raiffeisenbank \nSeewinkel-Hansag eGen"));
+        list4.add(new Location(47.6000949, 16.6252523, "Raiffeisenbank \nRegion Deutschkreutz-Horitschon eGen"));
+        list4.add(new Location(47.8966677, 16.6438987, "Raiffeisenbank \nNeusiedlersee-HÃ¼gelland eGen"));
         Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
         List<Route> listOfTheList = new ArrayList<>();
@@ -138,17 +156,6 @@ public class RouteContoller {
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
-    }
-
-    @GetMapping("/api/route")
-    @ResponseBody
-    public String getObject() throws JsonProcessingException {
-//        RouteObj routeObj = new RouteObj(Arrays.asList("Wien", "St. Pölten"));
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-//        return mapper.writeValueAsString(routeObj);
-        return null;
     }
 
     @PostMapping("api/mergeRoutes")

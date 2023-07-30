@@ -119,6 +119,67 @@ public class RouteControllerTest {
     assertTrue(allRetrievedLocations.containsAll(allLocations));
   }
 
+  @Test
+  public void mergeRoutes_case3() throws RouteNotFoundException, ApiException {
+    List<Location> list1 = new ArrayList<>();
+    list1.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list1.add(new Location(48.527794, 16.3619866, "Raiffeisenkasse Ernstbrunn eGen"));
+    Route route1 = RouteEvaluator.getFullRouteInformation(list1);
+
+    List<Location> list2 = new ArrayList<>();
+    list2.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list2.add(new Location(48.0863213, 16.291321, "Raiffeisen Regionalbank Mödling eGen"));
+    Route route2 = RouteEvaluator.getFullRouteInformation(list2);
+
+    List<Location> list3 = new ArrayList<>();
+    list3.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list3.add(new Location(48.56526, 16.0799974, "Raiffeisen Regionalbank Mödling eGen"));
+    Route route3 = RouteEvaluator.getFullRouteInformation(list3);
+
+    List<Location> list4 = new ArrayList<>();
+    list4.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list4.add(new Location(48.3738038, 16.3137991, "Raiffeisenbank Korneuburg eGen"));
+    Route route4 = RouteEvaluator.getFullRouteInformation(list4);
+
+    List<Location> list5 = new ArrayList<>();
+    list5.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list5.add(new Location(48.1464987, 16.7032167, "Raiffeisenkasse Orth a.d. Donau eGen"));
+    Route route5 = RouteEvaluator.getFullRouteInformation(list5);
+
+    List<Location> list6 = new ArrayList<>();
+    list6.add(new Location(48.21612, 16.373137, "RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+    list6.add(new Location(48.1784607, 16.0761195, "Raiffeisenbank Wienerwald eGen"));
+    Route route6 = RouteEvaluator.getFullRouteInformation(list6);
+
+    List<Route> allRoutes = new ArrayList<>();
+
+    allRoutes.add(route1);
+    allRoutes.add(route2);
+    allRoutes.add(route3);
+    allRoutes.add(route4);
+    allRoutes.add(route5);
+    allRoutes.add(route6);
+
+    var allLocations = new ArrayList<Location>();
+    allLocations.addAll(list1);
+    allLocations.addAll(list2);
+    allLocations.addAll(list3);
+    allLocations.addAll(list4);
+    allLocations.addAll(list5);
+    allLocations.addAll(list6);
+
+    var result = sut.mergeRoutes(allRoutes);
+
+    var allRetrievedLocations = new ArrayList<Location>();
+    for (var route : result.getBody()) {
+      allRetrievedLocations.addAll(route.getTargets());
+    }
+
+    assertTrue(allLocations.containsAll(allRetrievedLocations));
+    printMissingLocations(allLocations, allRetrievedLocations);
+    assertTrue(allRetrievedLocations.containsAll(allLocations));
+  }
+
   private void printMissingLocations(List<Location> allLocations, List<Location> retrievedLocations) {
     for (var location : allLocations) {
       if (!retrievedLocations.contains(location)) {

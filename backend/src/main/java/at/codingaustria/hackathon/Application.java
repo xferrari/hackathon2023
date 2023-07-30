@@ -31,8 +31,8 @@ public class Application {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Your API Title")
-            .description("Your API Description")
+            .title("Route Retrieval/Merging API")
+            .description("This API allows to retrieve sample routes and provides functionality for merging.")
             .version("1.0.0")
             .build();
     }
