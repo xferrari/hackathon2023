@@ -43,7 +43,7 @@ public class RouteEvaluator {
 
   public static Route getFullRouteInformation(List<Location> stops)
       throws RouteNotFoundException, ApiException {
-    String apiKey = "bf00158f-7ee7-46b6-a1ba-7b1669cc4c43"; // Replace with your actual API key
+    String apiKey = "TODO_ADD_KEY"; // Replace with your actual API key
 
     // Create the GraphHopper API client
     ApiClient apiClient = new ApiClient();
