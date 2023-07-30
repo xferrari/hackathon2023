@@ -110,6 +110,17 @@ export class MapComponent implements OnInit {
     });
   }
 
+  onRoute2ButtonClick(): void {
+    //this.createRouting(startPoint, endPoint);
+    this.map.remove();
+    this.initMap();
+
+    this.backendService.getRoutes2().subscribe((response) => {
+      this.routes = response;
+      this.handleResponse(response);
+    });
+  }
+
   onOptimizeButtonClick(): void {
     this.map.remove();
     this.initMap();
@@ -183,7 +194,10 @@ export class MapComponent implements OnInit {
   }
 
   getCO2Emissions(): number {
-    if(this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
+    if (
+      this.optimizedRoutes == undefined ||
+      this.optimizedRoutes.length === 0
+    ) {
       return 0;
     }
     const difference = this.getCostDifference();
