@@ -9,6 +9,7 @@
           [class.colorblind-mode]="isColorblindModeActive"
           color="primary"
           (click)="onOptimizeButtonClick()"
+          [disabled]="routes.length === 0"
         >
           Optimize Routes
         </button>
