@@ -10,12 +10,11 @@ import { Route } from '../model/route.model';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
-
   private CO2_EMISSION_FACTOR = 2.31; // kg CO2 per liter
   private FUEL_EFFICIENCY = 8; // L/100km
-  
-  public routes!: Route[]
-  public optimizedRoutes!: Route[]
+
+  public routes!: Route[];
+  public optimizedRoutes!: Route[];
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
@@ -116,6 +115,7 @@ export class MapComponent implements OnInit {
     this.initMap();
     if (this.routes.length > 0) {
       this.backendService.optimizeRoutes(this.routes).subscribe((response) => {
+        this.optimizedRoutes = response;
         this.handleResponse(response);
       });
     } else {
@@ -124,7 +124,7 @@ export class MapComponent implements OnInit {
 
   getCostSum(): number {
     if (this.routes == undefined || this.routes.length === 0) {
-      return 143;
+      return 0;
     }
     let kmSum = this.routes.reduce((sum, element) => sum + element.costs, 0);
     return Math.round(kmSum / 1000);
@@ -135,7 +135,7 @@ export class MapComponent implements OnInit {
       this.optimizedRoutes == undefined ||
       this.optimizedRoutes.length === 0
     ) {
-      return 73;
+      return 0;
     }
 
     let kmSum = this.optimizedRoutes.reduce(
@@ -175,7 +175,7 @@ export class MapComponent implements OnInit {
 
   getCostDifference(): number {
     return this.getCostSum() - this.getOptimizedCostSum();
-    }
+  }
 
   getCO2Emissions(): number {
     const difference = this.getCostDifference();
@@ -183,5 +183,4 @@ export class MapComponent implements OnInit {
     const co2Emission = fuelConsumed * this.CO2_EMISSION_FACTOR; // Calculate CO2 emissions in kg
     return co2Emission;
   }
-
 }
