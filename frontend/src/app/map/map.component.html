@@ -32,25 +32,28 @@
           [class.colorblind-mode]="isColorblindModeActive"
           (click)="toggleColorblind()"
         >
-          color blind mode
+          Color Blind Mode
         </button>
       </div>
     </div>
     <div [class.colorblind-mode]="isColorblindModeActive" class="result-box">
-      <label [style.color]="'blue'"
-        >Initial routes length: {{ getCostSum() }}km</label
+      <label [style.color]="'black'"
+        >Initial Routes Length: <b>{{ getCostSum() }}km</b></label
       >
       <br />
-      <label [style.color]="'purple'"
-        >Optimized routes length: {{ getOptimizedCostSum() }}km</label
+      <label [style.color]="'black'"
+        >Optimized Routes Length: <b>{{ getOptimizedCostSum() }}km</b></label
       >
       <br />
-      <label [style.color]="'orange'"
-        >Reduced by: {{ getCostDifference() }}km</label
+      <label [style.color]="'black'"
+        >Reduced By:
+        <b
+          ><label>{{ getCostDifference() }}km</label></b
+        ></label
       >
       <br />
-      <label [style.color]="'green'"
-        >Estimated CO2 Saved: {{ getCO2Emissions() }}kg</label
+      <label [style.color]="'black'"
+        >Estimated CO2 Saved: <b>{{ getCO2Emissions() }}kg</b></label
       >
     </div>
   </div>

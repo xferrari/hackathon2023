@@ -18,6 +18,29 @@ export class MapComponent implements OnInit {
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
+  private colors = [
+    '#4d4dff',
+    '#e8ccff',
+    '#06d1ca',
+    '#d4ef81',
+    '#72db7e',
+    '#ffa500',
+    '#7d76db',
+    '#e5d090',
+    '#cce8ff',
+    '#c2edf9',
+    '#ff0000',
+    '#57e5c9',
+    '#e2a98a',
+    '#d9bcf4',
+    '#6ed89e',
+    '#4d4dff',
+    '#3655b3',
+    '#d3deff',
+    '#ffb84d',
+    '#b38136',
+  ];
+
   private readonly defaultLat = 48.2144935;
   private readonly defaultLng = 16.3760585;
   private readonly defaultZoom = 9;
@@ -173,7 +196,8 @@ export class MapComponent implements OnInit {
         this.map,
         facilityNames,
         targetList,
-        '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
+        //'#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
+        this.colors[Math.floor(Math.random() * this.colors.length)]
       );
     });
   }
