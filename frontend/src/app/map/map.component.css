@@ -44,11 +44,15 @@ button {
 
 /* Styles for the disabled button */
 button:disabled {
-  background-color: rgba(223, 255, 206, 0.5); /* Add some transparency to indicate it's disabled */
+  background-color: rgba(
+    223,
+    255,
+    206,
+    0.5
+  ); /* Add some transparency to indicate it's disabled */
   color: #999; /* Change the text color for better readability */
   cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
 }
-
 
 /* Optionally, add some space between the button and other elements in the menu */
 button:not(:last-child) {
@@ -71,8 +75,6 @@ button.colorblind-mode {
   background-color: #f0f0f0;
 }
 
-
-
 .entry-container {
   max-width: 600px;
   margin: 10px;
@@ -84,14 +86,13 @@ button.colorblind-mode {
 }
 
 .result-box {
-  margin-top: auto; /* This will place the element at the bottom */
+  /*margin-top: auto;*/ /* This will place the element at the bottom */
   margin-left: 10px; /* This will add 10px space from the left */
   margin-bottom: 10px;
   background-color: rgb(223, 255, 206);
   width: 250px;
   border: 2px solid black;
   padding: 10px;
-  
 }
 
 /* CSS styles for the individual entry boxes */
@@ -106,4 +107,3 @@ button.colorblind-mode {
   font-size: 14px;
   margin: 10px 0;
 }
-
