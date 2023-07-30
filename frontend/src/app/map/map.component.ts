@@ -178,6 +178,9 @@ export class MapComponent implements OnInit {
   }
 
   getCO2Emissions(): number {
+    if(this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
+      return 0;
+    }
     const difference = this.getCostDifference();
     const fuelConsumed = (difference / 100) * this.FUEL_EFFICIENCY; // Calculate fuel consumed in liters
     const co2Emission = fuelConsumed * this.CO2_EMISSION_FACTOR; // Calculate CO2 emissions in kg
