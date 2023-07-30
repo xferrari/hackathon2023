@@ -88,29 +88,29 @@ public class RouteContoller {
     @ResponseBody
     public ResponseEntity<List<Route>> getInitData2() throws RouteNotFoundException, ApiException {
         List<Location> list2 = new ArrayList<>();
-        list2.add(new Location(48.4017869, 15.9847379));
-        list2.add(new Location(48.3739927, 16.6357775));
-        list2.add(new Location(48.1245335, 14.8823511));
+        list2.add(new Location(48.4017869, 15.9847379,"Raiffeisenbank Region Wagram eGen"));
+        list2.add(new Location(48.3739927, 16.6357775,"Raiffeisenbank Auersthal-Bockfließ-Groß Schweinbarth eGen"));
+        list2.add(new Location(48.1245335, 14.8823511,"Raiffeisenbank Region Amstetten eGen"));
         Route route2 = RouteEvaluator.getFullRouteInformation(list2);
 
         List<Location> list3 = new ArrayList<>();
-        list3.add(new Location(48.0053016, 16.231961));
-        list3.add(new Location(48.4017869, 15.9847379));
-        list3.add(new Location(48.1245335, 14.8823511));
+        list3.add(new Location(48.0053016, 16.231961,"Raiffeisenbank Region Baden eGen"));
+        list3.add(new Location(48.4017869, 15.9847379,"Raiffeisenbank Region Wagram eGen"));
+        list3.add(new Location(48.1245335, 14.8823511,"Raiffeisenbank Region Amstetten eGen"));
         Route route3 = RouteEvaluator.getFullRouteInformation(list3);
 
         List<Location> list1 = new ArrayList<>();
-        list1.add(new Location(48.21612, 16.373137));
-        list1.add(new Location(48.4017869, 15.9847379));
-        list1.add(new Location(48.3739927, 16.6357775));
-        list1.add(new Location(48.1245335, 14.8823511));
+        list1.add(new Location(48.21612, 16.373137,"RAIFFEISENLANDESBANK NIEDERÖSTERREICH-WIEN AG"));
+        list1.add(new Location(48.4017869, 15.9847379,"Raiffeisenbank Region Wagram eGen"));
+        list1.add(new Location(48.3739927, 16.6357775,"Raiffeisenbank Auersthal-Bockfließ-Groß Schweinbarth eGen"));
+        list1.add(new Location(48.1245335, 14.8823511,"Raiffeisenbank Region Amstetten eGen"));
         Route route1 = RouteEvaluator.getFullRouteInformation(list1);
 
         List<Location> list4 = new ArrayList<>();
-        list4.add(new Location(47.845516, 16.516668));
-        list4.add(new Location(47.7766024, 17.0326694));
-        list4.add(new Location(47.6000949, 16.6252523));
-        list4.add(new Location(47.8966677, 16.6438987));
+        list4.add(new Location(47.845516, 16.516668,"Raiffeisenlandesbank Burgenland und Revisionsverband eGen"));
+        list4.add(new Location(47.7766024, 17.0326694,"Raiffeisenbank Seewinkel-Hansag eGen"));
+        list4.add(new Location(47.6000949, 16.6252523,"Raiffeisenbank Region Deutschkreutz-Horitschon eGen"));
+        list4.add(new Location(47.8966677, 16.6438987,"Raiffeisenbank Neusiedlersee-HÃ¼gelland eGen"));
         Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
         List<Route> listOfTheList = new ArrayList<>();
