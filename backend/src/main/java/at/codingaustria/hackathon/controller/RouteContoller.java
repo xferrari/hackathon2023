@@ -21,11 +21,6 @@ import java.util.List;
 @RestController
 public class RouteContoller {
 
-    @GetMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
-    }
-
     @GetMapping("/api/initial3")
     @ResponseBody
     public ResponseEntity<List<Route>> getInitData3() throws RouteNotFoundException, ApiException {
@@ -138,17 +133,6 @@ public class RouteContoller {
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         return new ResponseEntity<>(listOfTheList, HttpStatus.OK);
-    }
-
-    @GetMapping("/api/route")
-    @ResponseBody
-    public String getObject() throws JsonProcessingException {
-//        RouteObj routeObj = new RouteObj(Arrays.asList("Wien", "St. Pölten"));
-//
-//        ObjectMapper mapper = new ObjectMapper();
-//        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-//        return mapper.writeValueAsString(routeObj);
-        return null;
     }
 
     @PostMapping("api/mergeRoutes")
