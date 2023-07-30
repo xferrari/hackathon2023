@@ -190,9 +190,7 @@ public class RouteContoller {
             if (mergedRoute != null)
                 break;
         }
-        //TODO something is dropped?!?!
         if (mergedRoute != null) {
-            //condition to debug: !mergedRoute.getTargets().containsAll(route1Merged.getTargets()) || !mergedRoute.getTargets().containsAll(route2Merged.getTargets())
             routes.remove(route1Merged);
             routes.remove(route2Merged);
             routes.add(mergedRoute);
