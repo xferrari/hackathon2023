@@ -16,7 +16,7 @@ export class MapComponent implements OnInit {
 
   private readonly defaultLat = 48.2144935;
   private readonly defaultLng = 16.3760585;
-  private readonly defaultZoom = 13;
+  private readonly defaultZoom = 9;
 
   constructor(
     private elementRef: ElementRef,
@@ -26,14 +26,20 @@ export class MapComponent implements OnInit {
   isColorblindModeActive = true;
 
   ngOnInit(): void {
-    this.initMap();
+    this.map = L.map(
+      this.elementRef.nativeElement.querySelector('#map')
+    ).setView([this.defaultLat, this.defaultLng], this.defaultZoom);
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(this.map);
   }
 
   private initMap(): void {
     // Create the map
     this.map = L.map(
       this.elementRef.nativeElement.querySelector('#map')
-    ).setView([this.defaultLat, this.defaultLng], this.defaultZoom);
+    );
     // Add OpenStreetMap tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
