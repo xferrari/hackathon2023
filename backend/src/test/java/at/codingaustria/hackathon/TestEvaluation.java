@@ -4,6 +4,7 @@ import at.codingaustria.hackathon.evaluation.RouteCompatator;
 import at.codingaustria.hackathon.evaluation.RouteNotFoundException;
 import at.codingaustria.hackathon.obj.Location;
 import com.graphhopper.directions.api.client.ApiException;
+import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
