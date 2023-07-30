@@ -3,8 +3,9 @@ package at.codingaustria.hackathon.obj;
 import java.util.Objects;
 
 public class Location {
-    double latitude;
-    double longitude;
+    private double latitude;
+    private double longitude;
+    private String facilityName;
 
     public Location() {
     }
@@ -12,6 +13,12 @@ public class Location {
     public Location(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public Location(double latitude, double longitude, String facilityName) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.facilityName = facilityName;
     }
 
     public double getLatitude() {
@@ -22,12 +29,8 @@ public class Location {
         return longitude;
     }
 
-    public boolean hasAltitude() {
-        return latitude != 0;
-    }
-
-    public boolean hasLongitude() {
-        return longitude != 0;
+    public String getFacilityName() {
+        return facilityName;
     }
 
     @Override
