@@ -25,6 +25,11 @@
     <div class="entry-container" *ngFor="let element of this.routes">
       {{element.costs}}
     </div>
+    <div class="result-box">
+      <label>Km before opt:</label>
+      <br>
+      <label>Km after opt:</label>
+    </div>
   </div>
   <div [class.colorblind-mode]="isColorblindModeActive" class="map-container">
     <link
