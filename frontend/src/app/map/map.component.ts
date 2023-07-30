@@ -10,7 +10,7 @@ import { Route } from '../model/route.model';
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements OnInit {
-  private routes!: Route[];
+  public routes!: Route[];
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
