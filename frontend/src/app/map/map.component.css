@@ -4,6 +4,11 @@
   height: 100%;
 }
 
+.container2 {
+  display: flex;
+  flex-flow: column;
+}
+
 /* Set the menu container to take 250px width */
 .menu-container {
   background-color: rgb(253, 253, 233);
@@ -52,4 +57,25 @@ button:not(:last-child) {
 .colorblind-mode .menu-frame button {
   background-color: var(--colorblind-primary) !important;
   color: var(--colorblind-accent) !important;
+}
+
+.entry-container {
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* CSS styles for the individual entry boxes */
+.entry-box {
+  width: 225px;
+  height: 80px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px 0;
 }
