@@ -100,6 +100,8 @@ export class MapComponent implements OnInit {
   }
 
   onRouteButtonClick(): void {
+    this.routes = [];
+    this.optimizedRoutes = [];
     //this.createRouting(startPoint, endPoint);
     this.map.remove();
     this.initMap();
@@ -111,6 +113,8 @@ export class MapComponent implements OnInit {
   }
 
   onRoute2ButtonClick(): void {
+    this.routes = [];
+    this.optimizedRoutes = [];
     //this.createRouting(startPoint, endPoint);
     this.map.remove();
     this.initMap();
