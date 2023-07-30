@@ -7,7 +7,7 @@ export class BackendService {
   constructor(private http: HttpClient) {}
 
   getRoutes() {
-    let url = 'http://localhost:8080/api/initial2';
+    let url = 'http://localhost:8080/api/initial';
     return this.http.get<[Route]>(url);
   }
 
