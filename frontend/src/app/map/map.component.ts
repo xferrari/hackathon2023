@@ -81,7 +81,7 @@ export class MapComponent implements OnInit {
         missingRouteTolerance: 0,
       },
       showAlternatives: false,
-      routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
+      routeWhileDragging: false, // Enable real-time route updates while dragging waypoints
     }).addTo(map);
 
     let index = 0;
@@ -174,6 +174,11 @@ export class MapComponent implements OnInit {
   }
 
   getCostDifference(): number {
+    let optimized = this.getOptimizedCostSum();
+    if (optimized === 0) {
+      return 0;
+    }
+
     return this.getCostSum() - this.getOptimizedCostSum();
   }
 
@@ -184,6 +189,6 @@ export class MapComponent implements OnInit {
     const difference = this.getCostDifference();
     const fuelConsumed = (difference / 100) * this.FUEL_EFFICIENCY; // Calculate fuel consumed in liters
     const co2Emission = fuelConsumed * this.CO2_EMISSION_FACTOR; // Calculate CO2 emissions in kg
-    return co2Emission;
+    return Math.round(co2Emission);
   }
 }

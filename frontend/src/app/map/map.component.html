@@ -30,18 +30,18 @@
       </div>
     </div>
     <div [class.colorblind-mode]="isColorblindModeActive" class="result-box">
-      <label [style.color]="'blue'">KM Before: {{ getCostSum() }}</label>
+      <label [style.color]="'blue'">Initial routes length: {{ getCostSum() }}km</label>
       <br />
       <label [style.color]="'purple'"
-        >KM Optimized: {{ getOptimizedCostSum() }}</label
+        >Optimized routes length: {{ getOptimizedCostSum() }}km</label
       >
       <br />
       <label [style.color]="'orange'"
-        >KM Difference: {{ getCostDifference() }}</label
+        >Reduced by: {{ getCostDifference() }}km</label
       >
       <br />
       <label [style.color]="'green'"
-        >CO2 Emissions Saved: {{ getCO2Emissions() }}</label
+        >Estimated CO2 Saved: {{ getCO2Emissions() }}kg</label
       >
     </div>
   </div>
