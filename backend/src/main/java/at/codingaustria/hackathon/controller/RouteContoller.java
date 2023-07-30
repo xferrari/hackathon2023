@@ -136,32 +136,46 @@ public class RouteContoller {
         return null;
     }
 
+    private List<Location> getAllLocations(List<Route> routes) {
+        var allLocations = new ArrayList<Location>();
+        for (var route : routes) {
+            allLocations.addAll(route.getTargets());
+        }
+        return allLocations;
+    }
+
     @PostMapping("api/mergeRoutes")
     public ResponseEntity<List<Route>> mergeRoutes(@RequestBody List<Route> routes)
             throws RouteNotFoundException, ApiException {
+
+        var initialLocations = getAllLocations(routes);
 
         var routesWithCosts = new ArrayList<Route>();
         for (var route : routes) {
             routesWithCosts.add(RouteEvaluator.getFullRouteInformation(route.getTargets()));
         }
 
+
+
         var size = 0;
         var counter = 0;
         do {
             counter++;
             size = routesWithCosts.size();
-            mergeRoutes1(routesWithCosts);
+            mergeRoutes1(routesWithCosts, initialLocations);
         } while (size > routesWithCosts.size());
 
         return new ResponseEntity<>(routesWithCosts, HttpStatus.OK);
     }
 
-    private void mergeRoutes1(List<Route> routes) throws RouteNotFoundException, ApiException {
+    private void mergeRoutes1(List<Route> routes, List<Location> initial) throws RouteNotFoundException, ApiException {
         Route mergedRoute = null;
         Route route1Merged = null;
         Route route2Merged = null;
+        var counter = 0;
         for (var route1 : routes) {
             for (var route2 : routes) {
+                counter++;
                 if (route1.equals(route2))
                     continue;
                 var merged = RouteCompatator.compareRoutes(route1.getTargets(), route2.getTargets());
@@ -176,7 +190,9 @@ public class RouteContoller {
             if (mergedRoute != null)
                 break;
         }
+        //TODO something is dropped?!?!
         if (mergedRoute != null) {
+            //condition to debug: !mergedRoute.getTargets().containsAll(route1Merged.getTargets()) || !mergedRoute.getTargets().containsAll(route2Merged.getTargets())
             routes.remove(route1Merged);
             routes.remove(route2Merged);
             routes.add(mergedRoute);

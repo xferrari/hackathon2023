@@ -2,27 +2,28 @@
   <div class="container2">
 
   <div class="menu-container">
+  <div [class.colorblind-mode]="isColorblindModeActive" class="menu-container">
     <div class="menu-frame">
-      <button mat-raised-button color="primary" (click)="onRouteButtonClick()">
+      <button [class.colorblind-mode]="isColorblindModeActive" color="primary" (click)="onRouteButtonClick()">
         Get Routes
       </button>
       <button
-        mat-raised-button
+        [class.colorblind-mode]="isColorblindModeActive"
         color="primary"
         (click)="onOptimizeButtonClick()"
       >
         Optimize Routes
       </button>
       <button
-        mat-raised-button
         color="primary"
-        [class.button-colorblind-mode]="isColorblindModeActive"
+        [class.colorblind-mode]="isColorblindModeActive"
         (click)="toggleColorblind()"
       >
         color blind mode
       </button>
     </div>
   </div>
+  <div [class.colorblind-mode]="isColorblindModeActive" class="map-container">
     <div class="entry-container" *ngFor="let element of this.routes">
       {{element.costs}}
       </div>
@@ -33,7 +34,7 @@
       href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
     />
     <div class="map-frame">
-      <div id="map"></div>
+      <div [class.colorblind-mode]="isColorblindModeActive" id="map"></div>
     </div>
   </div>
 </div>
