@@ -79,6 +79,10 @@ button.colorblind-mode {
   border: 2px solid #70bbda;
 }
 
+.result-box {
+  margin-top: auto;
+}
+
 /* CSS styles for the individual entry boxes */
 .entry-box {
   width: 225px;
