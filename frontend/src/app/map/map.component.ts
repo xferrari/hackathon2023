@@ -23,7 +23,7 @@ export class MapComponent implements OnInit {
     private backendService: BackendService
   ) {}
 
-  isColorblindModeActive = true;
+  isColorblindModeActive = false;
 
   ngOnInit(): void {
     this.initMap();
@@ -114,8 +114,6 @@ export class MapComponent implements OnInit {
 
   // Function to toggle colorblind-friendly mode
   toggleColorblind(): void {
-    console.log('test');
-
     this.isColorblindModeActive = !this.isColorblindModeActive;
     if (this.isColorblindModeActive) {
       document.documentElement.classList.add('colorblind-mode');

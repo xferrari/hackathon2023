@@ -6,7 +6,7 @@
 
 /* Set the menu container to take 250px width */
 .menu-container {
-  background-color: rgb(253, 253, 233);
+  background-color: rgb(150, 255, 98);
   width: 250px;
   border: 2px solid black;
   padding: 10px;
@@ -14,7 +14,7 @@
 }
 
 .map-container {
-  background-color: rgb(253, 253, 233);
+  background-color: rgb(150, 255, 98);
   flex: 1;
   border: 2px solid black;
   padding: 10px;
@@ -31,6 +31,8 @@
 
 /* Center the button horizontally in the menu and make it wider */
 button {
+  background-color: rgb(255, 204, 160);
+  color: black;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -40,16 +42,16 @@ button:not(:last-child) {
   margin-bottom: 10px;
 }
 
-/* Apply colorblind-friendly styles when colorblind mode is active */
-.colorblind-mode .menu-container {
-  background-color: rgb(0, 0, 0); /* Example colorblind-friendly background color */
+.menu-container.colorblind-mode {
+  background-color: #f0f0f0; /* Light gray background color */
 }
 
-.colorblind-mode .map-container {
-  background-color: rgb(0, 0, 0); /* Example colorblind-friendly background color */
+.map-container.colorblind-mode {
+  background-color: #f0f0f0; /* Light gray background color */
 }
 
-.colorblind-mode .menu-frame button {
-  background-color: var(--colorblind-primary) !important;
-  color: var(--colorblind-accent) !important;
+button.colorblind-mode {
+  background-color: #f0f0f0;
 }
+
+
