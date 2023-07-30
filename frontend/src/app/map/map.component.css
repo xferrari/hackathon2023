@@ -42,6 +42,14 @@ button {
   margin-bottom: 10px;
 }
 
+/* Styles for the disabled button */
+button:disabled {
+  background-color: rgba(255, 204, 160, 0.5); /* Add some transparency to indicate it's disabled */
+  color: #999; /* Change the text color for better readability */
+  cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+}
+
+
 /* Optionally, add some space between the button and other elements in the menu */
 button:not(:last-child) {
   margin-bottom: 10px;
@@ -71,6 +79,10 @@ button.colorblind-mode {
   border: 2px solid #70bbda;
 }
 
+.result-box {
+  margin-top: auto;
+}
+
 /* CSS styles for the individual entry boxes */
 .entry-box {
   width: 225px;
@@ -83,3 +95,4 @@ button.colorblind-mode {
   font-size: 14px;
   margin: 10px 0;
 }
+
