@@ -143,7 +143,7 @@ public class RouteContoller {
         list4.add(new Location(47.845516, 16.516668, "RAIFFEISENLANDESBANK \nBurgenland und Revisionsverband eGen"));
         list4.add(new Location(47.7766024, 17.0326694, "Raiffeisenbank \nSeewinkel-Hansag eGen"));
         list4.add(new Location(47.6000949, 16.6252523, "Raiffeisenbank \nRegion Deutschkreutz-Horitschon eGen"));
-        list4.add(new Location(47.8966677, 16.6438987, "Raiffeisenbank \nNeusiedlersee-HÃ¼gelland eGen"));
+        list4.add(new Location(47.8966677, 16.6438987, "Raiffeisenbank \nNeusiedlersee-Hügelland eGen"));
         Route route4 = RouteEvaluator.getFullRouteInformation(list4);
 
         List<Route> listOfTheList = new ArrayList<>();
