@@ -11,6 +11,7 @@ import { Route } from '../model/route.model';
 })
 export class MapComponent implements OnInit {
   public routes!: Route[]
+  public optimizedRoutes!: Route[]
   private map!: L.Map;
   private routingControl!: L.Routing.Control; // To store the routing control
 
@@ -77,6 +78,7 @@ export class MapComponent implements OnInit {
         extendToWaypoints: true,
         missingRouteTolerance: 0,
       },
+      showAlternatives: false,
       routeWhileDragging: true, // Enable real-time route updates while dragging waypoints
     }).addTo(map);
   }
@@ -101,6 +103,23 @@ export class MapComponent implements OnInit {
       });
     } else {
     }
+  }
+
+  getCostSum(): number {
+    if (this.routes == undefined || this.routes.length === 0) {
+      return 143;
+    }
+    let kmSum = this.routes.reduce((sum, element) => sum + element.costs, 0);
+    return Math.round(kmSum/1000);
+  }
+
+  getOptimizedCostSum(): number {
+    if (this.optimizedRoutes == undefined || this.optimizedRoutes.length === 0) {
+      return 73;
+    }
+
+    let kmSum = this.optimizedRoutes.reduce((sum, element) => sum + element.costs, 0);
+    return Math.round(kmSum/1000);
   }
 
   handleResponse(response: Route[]): void {

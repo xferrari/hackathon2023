@@ -26,9 +26,9 @@
       {{element.costs}}
     </div>
     <div class="result-box">
-      <label>Km before opt:</label>
+      <label>Km before opt: {{getCostSum()}}</label>
       <br>
-      <label>Km after opt:</label>
+      <label>Km after opt: {{getOptimizedCostSum()}}</label>
     </div>
   </div>
   <div [class.colorblind-mode]="isColorblindModeActive" class="map-container">
