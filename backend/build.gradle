@@ -3,8 +3,6 @@ plugins {
     id 'java'
 }
 
-
-
 version = '1.0.0'
 group = 'at.codingaustria.hackathon'
 
@@ -22,6 +20,10 @@ dependencies {
     implementation group: 'com.graphhopper', name: 'directions-api-client', version: '0.13.0'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
