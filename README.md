@@ -1,4 +1,4 @@
-# Hackathon 2023 - <CodingAustria> - Business Impact - Better Routing
+# Hackathon 2023 - CodingAustria - Business Impact - Better Routing
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
